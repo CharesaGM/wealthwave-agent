@@ -2,9 +2,10 @@ name: WealthWave FM daily posts
 
 on:
   schedule:
-    # Times are UTC. In UK summer time: 17:00 UTC = 6pm, 20:00 UTC = 9pm.
-    - cron: "0 17 * * *"   # MeAffirmation, 6pm UK
-    - cron: "0 20 * * *"   # NeuroFusion, 9pm UK
+    # Times are UTC. In UK summer time: 17:09 UTC = about 6pm, 20:23 UTC = about 9pm.
+    # The odd minutes avoid GitHub's busy on-the-hour queue.
+    - cron: "9 17 * * *"    # MeAffirmation, about 6pm UK
+    - cron: "23 20 * * *"   # NeuroFusion, about 9pm UK
   workflow_dispatch:
     inputs:
       brand:
