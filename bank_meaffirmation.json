@@ -1,0 +1,683 @@
+{
+ "brand": {
+  "theme": "meaffirmation",
+  "label": "MEAFFIRMATION",
+  "handle": "@wealth.wave.fm",
+  "cta_line": "Say it out loud.",
+  "cta_name": "MeAffirmation",
+  "cta_sub": "Free. Type this in your browser:",
+  "cta_url": "meaffirmation.netlify.app",
+  "hashtags": [
+   "#affirmations",
+   "#moveinsilence",
+   "#meaffirmation",
+   "#manifestation",
+   "#speakitintoexistence",
+   "#selflove",
+   "#dailyaffirmations",
+   "#womensupportingwomen"
+  ]
+ },
+ "slideshows": [
+  {
+   "id": "ma-001",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Move in silence. But you still need to say it somewhere."
+    },
+    {
+     "type": "body",
+     "title": "Not everyone's happy for you",
+     "text": "Some people can't hold your dreams without shrinking them."
+    },
+    {
+     "type": "body",
+     "title": "So you stay quiet",
+     "text": "But dreams kept inside can start to feel less real."
+    },
+    {
+     "type": "body",
+     "title": "Say it anyway",
+     "text": "Out loud, to yourself."
+    },
+    {
+     "type": "body",
+     "title": "That's what this is for",
+     "text": "A private place to speak it into being."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Move in silence. Speak in private 🤍"
+  },
+  {
+   "id": "ma-002",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Big news and nobody to tell?"
+    },
+    {
+     "type": "body",
+     "title": "It happens",
+     "text": "The call you've waited months for finally comes."
+    },
+    {
+     "type": "body",
+     "title": "You grab your phone",
+     "text": "And realise there's no one who'd truly get it."
+    },
+    {
+     "type": "body",
+     "title": "Don't let it pass",
+     "text": "Say it. Record it. Celebrate it."
+    },
+    {
+     "type": "body",
+     "title": "Your voice",
+     "text": "Future you will want to hear this moment."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Your wins deserve a witness, even if it's you ✨"
+  },
+  {
+   "id": "ma-003",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Why saying it out loud hits different"
+    },
+    {
+     "type": "body",
+     "title": "Thinking it",
+     "text": "Stays vague and easy to doubt."
+    },
+    {
+     "type": "body",
+     "title": "Saying it",
+     "text": "Forces you to choose actual words."
+    },
+    {
+     "type": "body",
+     "title": "Hearing it",
+     "text": "Your own voice, saying it like it's true."
+    },
+    {
+     "type": "body",
+     "title": "That's the shift",
+     "text": "From wishing to declaring."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Speak it. Then hear yourself speak it 🎙️"
+  },
+  {
+   "id": "ma-004",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Ten minutes. No script. Just you."
+    },
+    {
+     "type": "body",
+     "title": "The riff",
+     "text": "Talk about your dream like you're telling a best friend."
+    },
+    {
+     "type": "body",
+     "title": "No rules",
+     "text": "Ramble, laugh, cry, repeat yourself."
+    },
+    {
+     "type": "body",
+     "title": "Up to 10 minutes",
+     "text": "Enough room to really get into it."
+    },
+    {
+     "type": "body",
+     "title": "Then choose",
+     "text": "Keep it, or release it."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Riffing is just talking about your life like it's already good 🤍"
+  },
+  {
+   "id": "ma-005",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Release it to the void"
+    },
+    {
+     "type": "body",
+     "title": "Some things",
+     "text": "You just need to say once and let go of."
+    },
+    {
+     "type": "body",
+     "title": "The void",
+     "text": "Release your recording anonymously."
+    },
+    {
+     "type": "body",
+     "title": "No name",
+     "text": "Nobody knows it came from you."
+    },
+    {
+     "type": "body",
+     "title": "Let it go",
+     "text": "Said. Released. Done."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Some dreams need to be spoken, then released 🌌"
+  },
+  {
+   "id": "ma-006",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Keep it for the hard days"
+    },
+    {
+     "type": "body",
+     "title": "Record the good days",
+     "text": "The win. The breakthrough. The feeling."
+    },
+    {
+     "type": "body",
+     "title": "Save it privately",
+     "text": "Only you can hear it."
+    },
+    {
+     "type": "body",
+     "title": "On a bad day",
+     "text": "Press play."
+    },
+    {
+     "type": "body",
+     "title": "Hear yourself",
+     "text": "Reminding you who you are."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Your own voice might be the pep talk you need 🤍"
+  },
+  {
+   "id": "ma-007",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Got rejected today? Reaffirm tonight."
+    },
+    {
+     "type": "body",
+     "title": "It stings",
+     "text": "Say that out loud too. It's allowed."
+    },
+    {
+     "type": "body",
+     "title": "Then reframe",
+     "text": "Say what you're still becoming."
+    },
+    {
+     "type": "body",
+     "title": "Say it with your chest",
+     "text": "Not a whisper. A declaration."
+    },
+    {
+     "type": "body",
+     "title": "Listen back",
+     "text": "Hear the version of you that didn't quit."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "A no is information, not identity ✨"
+  },
+  {
+   "id": "ma-008",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Your dream too big to say to people? Say it here."
+    },
+    {
+     "type": "body",
+     "title": "The judgement",
+     "text": "People laugh at big dreams they couldn't hold themselves."
+    },
+    {
+     "type": "body",
+     "title": "So you shrink it",
+     "text": "Or never say it at all."
+    },
+    {
+     "type": "body",
+     "title": "Here, you don't have to",
+     "text": "Say the full size of it."
+    },
+    {
+     "type": "body",
+     "title": "Nobody's watching",
+     "text": "It's just you and your voice."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Say the real dream. The full size 👑"
+  },
+  {
+   "id": "ma-009",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "No likes. No comments. No followers."
+    },
+    {
+     "type": "body",
+     "title": "Social media",
+     "text": "Everything's a performance."
+    },
+    {
+     "type": "body",
+     "title": "Here",
+     "text": "Nothing is."
+    },
+    {
+     "type": "body",
+     "title": "No numbers",
+     "text": "Nothing to measure your dream against."
+    },
+    {
+     "type": "body",
+     "title": "Just your voice",
+     "text": "Honest, unfiltered, yours."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "A space with zero pressure to perform 🤍"
+  },
+  {
+   "id": "ma-010",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Don't know what to say? Start here"
+    },
+    {
+     "type": "body",
+     "title": "Prompt one",
+     "text": "'The thing I'm most proud of this week is'"
+    },
+    {
+     "type": "body",
+     "title": "Prompt two",
+     "text": "'A year from now, I am'"
+    },
+    {
+     "type": "body",
+     "title": "Prompt three",
+     "text": "'I am ready to receive'"
+    },
+    {
+     "type": "body",
+     "title": "Then keep talking",
+     "text": "The first sentence is the hardest."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Save these for your next riff 📌"
+  },
+  {
+   "id": "ma-011",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Three things to say out loud tonight"
+    },
+    {
+     "type": "body",
+     "title": "One",
+     "text": "Something that went right today."
+    },
+    {
+     "type": "body",
+     "title": "Two",
+     "text": "Something you're calling in."
+    },
+    {
+     "type": "body",
+     "title": "Three",
+     "text": "Something you love about yourself."
+    },
+    {
+     "type": "body",
+     "title": "That's it",
+     "text": "Under a minute. Every night."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Try it tonight. Just three 🌙"
+  },
+  {
+   "id": "ma-012",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Leave a voice note for your future self"
+    },
+    {
+     "type": "body",
+     "title": "Record it now",
+     "text": "Where you are, what you want, how it feels."
+    },
+    {
+     "type": "body",
+     "title": "Keep it private",
+     "text": "Don't listen for a while."
+    },
+    {
+     "type": "body",
+     "title": "Come back",
+     "text": "In three months, or six."
+    },
+    {
+     "type": "body",
+     "title": "Hear it",
+     "text": "You'll be amazed how much has moved."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "The most powerful before and after is in your own voice 🎙️"
+  },
+  {
+   "id": "ma-013",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Celebrate the small wins out loud"
+    },
+    {
+     "type": "body",
+     "title": "Small wins",
+     "text": "Paid a bill. Kept a promise. Got through the day."
+    },
+    {
+     "type": "body",
+     "title": "They count",
+     "text": "Momentum is made of small wins."
+    },
+    {
+     "type": "body",
+     "title": "Say it",
+     "text": "Name it. Out loud."
+    },
+    {
+     "type": "body",
+     "title": "Notice",
+     "text": "The more you celebrate, the more you notice."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "What's today's small win? 👇🏾"
+  },
+  {
+   "id": "ma-014",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Nobody knows it's you"
+    },
+    {
+     "type": "body",
+     "title": "Anonymous",
+     "text": "Released recordings don't carry your name."
+    },
+    {
+     "type": "body",
+     "title": "Freedom",
+     "text": "Say what you'd never post."
+    },
+    {
+     "type": "body",
+     "title": "Honest",
+     "text": "No image to protect."
+    },
+    {
+     "type": "body",
+     "title": "Just the truth",
+     "text": "Of what you want."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Say the thing you'd never post 🤍"
+  },
+  {
+   "id": "ma-015",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "When the group chat isn't the place"
+    },
+    {
+     "type": "body",
+     "title": "Some news",
+     "text": "Is too fresh to share."
+    },
+    {
+     "type": "body",
+     "title": "Some dreams",
+     "text": "Are too fragile for opinions."
+    },
+    {
+     "type": "body",
+     "title": "Some feelings",
+     "text": "Just need to be said, not solved."
+    },
+    {
+     "type": "body",
+     "title": "Say it here first",
+     "text": "Before you share it anywhere else."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Not everything is for the group chat 🤫"
+  },
+  {
+   "id": "ma-016",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Affirmations feel fake? Try this instead"
+    },
+    {
+     "type": "body",
+     "title": "The problem",
+     "text": "Reading lines that don't sound like you."
+    },
+    {
+     "type": "body",
+     "title": "The fix",
+     "text": "Talk naturally about the life you're building."
+    },
+    {
+     "type": "body",
+     "title": "Real words",
+     "text": "Your words feel true in a way scripts don't."
+    },
+    {
+     "type": "body",
+     "title": "That's a riff",
+     "text": "Affirmations in your own voice."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Stop reading affirmations. Start speaking them 🎙️"
+  },
+  {
+   "id": "ma-017",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "A 60 second morning declaration"
+    },
+    {
+     "type": "body",
+     "title": "Before your phone",
+     "text": "Before anyone else's voice gets in."
+    },
+    {
+     "type": "body",
+     "title": "Say who you are",
+     "text": "Three sentences, present tense."
+    },
+    {
+     "type": "body",
+     "title": "Say what's coming",
+     "text": "One thing you expect today."
+    },
+    {
+     "type": "body",
+     "title": "Go",
+     "text": "Walk into the day already decided."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Your voice first, every morning ☀️"
+  },
+  {
+   "id": "ma-018",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Gratitude hits harder out loud"
+    },
+    {
+     "type": "body",
+     "title": "Writing it",
+     "text": "Good."
+    },
+    {
+     "type": "body",
+     "title": "Saying it",
+     "text": "Better. You feel it in your body."
+    },
+    {
+     "type": "body",
+     "title": "Hearing it back",
+     "text": "You remember how much is already here."
+    },
+    {
+     "type": "body",
+     "title": "Try it",
+     "text": "Three things, spoken, tonight."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Say thank you out loud tonight 🤍"
+  },
+  {
+   "id": "ma-019",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Speaking it out loud is how you start believing it"
+    },
+    {
+     "type": "body",
+     "title": "Doubt",
+     "text": "Lives in silence and vagueness."
+    },
+    {
+     "type": "body",
+     "title": "Words",
+     "text": "Give your dream edges."
+    },
+    {
+     "type": "body",
+     "title": "Repetition",
+     "text": "Makes it familiar."
+    },
+    {
+     "type": "body",
+     "title": "Familiar",
+     "text": "Starts to feel possible."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Say it until it sounds normal ✨"
+  },
+  {
+   "id": "ma-020",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "It's free. It's private. It's yours."
+    },
+    {
+     "type": "body",
+     "title": "Free",
+     "text": "No subscription, no catch."
+    },
+    {
+     "type": "body",
+     "title": "Private",
+     "text": "Keep every recording for yourself if you want."
+    },
+    {
+     "type": "body",
+     "title": "Or release",
+     "text": "Let it go into the void."
+    },
+    {
+     "type": "body",
+     "title": "Just open it",
+     "text": "And start talking."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Your dreams deserve somewhere to be said 🤍"
+  }
+ ]
+}
