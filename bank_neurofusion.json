@@ -1,0 +1,684 @@
+{
+ "brand": {
+  "theme": "neurofusion",
+  "label": "WEALTHWAVE FM",
+  "handle": "@wealth.wave.fm",
+  "cta_line": "Ready to hear it for yourself?",
+  "cta_name": "NeuroFusion™",
+  "cta_sub": "Type this in your browser:",
+  "cta_url": "wealthwavefm.netlify.app",
+  "hashtags": [
+   "#binauralbeats",
+   "#neurofusion",
+   "#wealthwavefm",
+   "#manifestation",
+   "#meditation",
+   "#thetawaves",
+   "#frequency",
+   "#lawofattraction",
+   "#subconsciousmind"
+  ]
+ },
+ "slideshows": [
+  {
+   "id": "nf-001",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Two frequencies go in. Your brain creates a third."
+    },
+    {
+     "type": "body",
+     "title": "Left ear",
+     "text": "Say 200 Hz plays in your left ear."
+    },
+    {
+     "type": "body",
+     "title": "Right ear",
+     "text": "And 210 Hz plays in your right."
+    },
+    {
+     "type": "body",
+     "title": "The third tone",
+     "text": "Your brain perceives a 10 Hz beat that neither ear actually heard."
+    },
+    {
+     "type": "body",
+     "title": "Why it matters",
+     "text": "That beat sits in the same range as your brain's own relaxed rhythms."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "This is what binaural beats actually are. Headphones on, and your brain does the rest 🎧"
+  },
+  {
+   "id": "nf-002",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "A radio executive spent decades researching sound and consciousness"
+    },
+    {
+     "type": "body",
+     "title": "Robert Monroe",
+     "text": "In the 1970s he founded the Monroe Institute in Virginia."
+    },
+    {
+     "type": "body",
+     "title": "The idea",
+     "text": "Different tones in each ear to bring both sides of the brain into sync."
+    },
+    {
+     "type": "body",
+     "title": "The name",
+     "text": "He called it hemispheric synchronisation."
+    },
+    {
+     "type": "body",
+     "title": "The legacy",
+     "text": "Decades later, people still use sound to reach deep meditative states."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "The research tradition behind everything we do at WealthWave FM 🌊"
+  },
+  {
+   "id": "nf-003",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "The US Army studied this. The report is public."
+    },
+    {
+     "type": "body",
+     "title": "1983",
+     "text": "An Army intelligence officer assessed a sound based consciousness method called the Gateway Process."
+    },
+    {
+     "type": "body",
+     "title": "The method",
+     "text": "It used binaural sound to guide listeners into deep, focused states."
+    },
+    {
+     "type": "body",
+     "title": "Declassified",
+     "text": "The report was released in 2003 and sits in the CIA's public reading room."
+    },
+    {
+     "type": "body",
+     "title": "Read it yourself",
+     "text": "Search 'Analysis and Assessment of Gateway Process'."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Real document. Look it up tonight 📄"
+  },
+  {
+   "id": "nf-004",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Your brain has at least four speeds"
+    },
+    {
+     "type": "body",
+     "title": "Beta",
+     "text": "Alert, busy, problem solving. Where most of your day lives."
+    },
+    {
+     "type": "body",
+     "title": "Alpha",
+     "text": "Calm and relaxed. Eyes closed, mind soft."
+    },
+    {
+     "type": "body",
+     "title": "Theta",
+     "text": "The dreamy edge of sleep. Vivid imagery, deep meditation."
+    },
+    {
+     "type": "body",
+     "title": "Delta",
+     "text": "Deep, dreamless sleep."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Most of us are stuck in beta all day. Binaural beats are designed to guide you elsewhere 🧠"
+  },
+  {
+   "id": "nf-005",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Why manifestation coaches talk about theta"
+    },
+    {
+     "type": "body",
+     "title": "The in between",
+     "text": "Theta is that drifting state right before you fall asleep."
+    },
+    {
+     "type": "body",
+     "title": "Vivid",
+     "text": "Images feel real and emotional here, not forced."
+    },
+    {
+     "type": "body",
+     "title": "Softer filter",
+     "text": "The busy, critical voice of the day goes quiet."
+    },
+    {
+     "type": "body",
+     "title": "The practice",
+     "text": "Many people save their visualisation for this window."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Visualise when your mind is actually listening ✨"
+  },
+  {
+   "id": "nf-006",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "You don't need ten years of meditation to reach the void"
+    },
+    {
+     "type": "body",
+     "title": "The struggle",
+     "text": "Sit still. Clear your mind. Your mind refuses."
+    },
+    {
+     "type": "body",
+     "title": "The shortcut",
+     "text": "Sound gives your brain a rhythm to follow instead of a blank to fill."
+    },
+    {
+     "type": "body",
+     "title": "What it's for",
+     "text": "Getting into that quiet, spacious state faster."
+    },
+    {
+     "type": "body",
+     "title": "Then",
+     "text": "You do the work you went there to do."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Stop fighting your thoughts. Give your brain something to follow 🌌"
+  },
+  {
+   "id": "nf-007",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "The one rule for binaural beats"
+    },
+    {
+     "type": "body",
+     "title": "Headphones",
+     "text": "Speakers mix the two tones in the air before they reach you."
+    },
+    {
+     "type": "body",
+     "title": "Why",
+     "text": "Each ear needs its own separate frequency."
+    },
+    {
+     "type": "body",
+     "title": "No headphones",
+     "text": "No third tone. Just sound."
+    },
+    {
+     "type": "body",
+     "title": "Any headphones",
+     "text": "Earbuds work. Over ear is even better."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Save this before your first session 🎧"
+  },
+  {
+   "id": "nf-008",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Mistakes people make with binaural beats"
+    },
+    {
+     "type": "body",
+     "title": "Too loud",
+     "text": "Low and comfortable is all you need."
+    },
+    {
+     "type": "body",
+     "title": "Multitasking",
+     "text": "Scrolling while listening keeps you in beta."
+    },
+    {
+     "type": "body",
+     "title": "Giving up fast",
+     "text": "Give it a week of regular sessions."
+    },
+    {
+     "type": "body",
+     "title": "Wrong place",
+     "text": "Never while driving or doing anything that needs your full attention."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Number four is non negotiable 🚗❌"
+  },
+  {
+   "id": "nf-009",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "A 9pm routine for people who can't switch off"
+    },
+    {
+     "type": "body",
+     "title": "Phone down",
+     "text": "Screen away, lights low."
+    },
+    {
+     "type": "body",
+     "title": "Headphones in",
+     "text": "Choose a slow, theta session."
+    },
+    {
+     "type": "body",
+     "title": "Set one intention",
+     "text": "One sentence about what you're calling in."
+    },
+    {
+     "type": "body",
+     "title": "Let go",
+     "text": "Breathe, follow the sound, and drift."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Try it tonight and tell me how you slept 🌙"
+  },
+  {
+   "id": "nf-010",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Use binaural beats for focus, not just sleep"
+    },
+    {
+     "type": "body",
+     "title": "Different speeds",
+     "text": "Faster beats sit in the alert, focused range."
+    },
+    {
+     "type": "body",
+     "title": "Deep work",
+     "text": "Put them on for one task at a time."
+    },
+    {
+     "type": "body",
+     "title": "Timebox it",
+     "text": "25 to 45 minutes, then a break."
+    },
+    {
+     "type": "body",
+     "title": "Notice",
+     "text": "Many listeners find it easier to stay on task."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Morning focus, evening calm. Same headphones 💻"
+  },
+  {
+   "id": "nf-011",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "What people often notice in their first session"
+    },
+    {
+     "type": "body",
+     "title": "Heaviness",
+     "text": "Your body feeling heavy or anchored."
+    },
+    {
+     "type": "body",
+     "title": "Tingling",
+     "text": "A light buzz in the hands or face."
+    },
+    {
+     "type": "body",
+     "title": "Time slips",
+     "text": "Twenty minutes feels like five."
+    },
+    {
+     "type": "body",
+     "title": "Everyone differs",
+     "text": "Some feel a lot, some feel it build over days."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Did you feel any of these? Tell me below 👇🏾"
+  },
+  {
+   "id": "nf-012",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Solfeggio and binaural beats are not the same thing"
+    },
+    {
+     "type": "body",
+     "title": "Solfeggio",
+     "text": "Specific tones like 528 Hz, played to both ears."
+    },
+    {
+     "type": "body",
+     "title": "Binaural",
+     "text": "Two different tones, one in each ear, creating a third."
+    },
+    {
+     "type": "body",
+     "title": "Different jobs",
+     "text": "One is a tone. The other is a rhythm your brain follows."
+    },
+    {
+     "type": "body",
+     "title": "Together",
+     "text": "Some sessions layer both."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Now you know the difference 🎶"
+  },
+  {
+   "id": "nf-013",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Set your intention before you press play"
+    },
+    {
+     "type": "body",
+     "title": "Why",
+     "text": "Theta is where the mind wanders. Give it a direction."
+    },
+    {
+     "type": "body",
+     "title": "One line",
+     "text": "Write it in the present tense, as if it's done."
+    },
+    {
+     "type": "body",
+     "title": "Feel it",
+     "text": "Picture the moment it's real."
+    },
+    {
+     "type": "body",
+     "title": "Then release it",
+     "text": "Let the sound carry you. Stop gripping."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Intention first. Sound second ✍🏾"
+  },
+  {
+   "id": "nf-014",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Can't quiet your mind in meditation? Here's why"
+    },
+    {
+     "type": "body",
+     "title": "Your brain hates a vacuum",
+     "text": "Telling it to 'think of nothing' gives it nothing to hold."
+    },
+    {
+     "type": "body",
+     "title": "So it fills the gap",
+     "text": "With lists, worries and replays."
+    },
+    {
+     "type": "body",
+     "title": "Give it a rhythm",
+     "text": "A steady beat is something to follow."
+    },
+    {
+     "type": "body",
+     "title": "The shift",
+     "text": "Following is easier than forcing."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "You're not bad at meditation. You just need a guide 🌊"
+  },
+  {
+   "id": "nf-015",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Mind awake, body asleep"
+    },
+    {
+     "type": "body",
+     "title": "The state",
+     "text": "Your body fully relaxed while your mind stays aware."
+    },
+    {
+     "type": "body",
+     "title": "Why people chase it",
+     "text": "It's where deep visualisation and reflection feel easiest."
+    },
+    {
+     "type": "body",
+     "title": "The challenge",
+     "text": "Most people either stay alert or fall asleep."
+    },
+    {
+     "type": "body",
+     "title": "Sound helps",
+     "text": "Slow beats are designed to hold you in between."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "The sweet spot between awake and asleep 🌌"
+  },
+  {
+   "id": "nf-016",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "What the research actually says about binaural beats"
+    },
+    {
+     "type": "body",
+     "title": "Honest answer",
+     "text": "Studies are mixed, and it's still a growing field."
+    },
+    {
+     "type": "body",
+     "title": "Some promising",
+     "text": "Several studies report reduced anxiety and better relaxation."
+    },
+    {
+     "type": "body",
+     "title": "Personal",
+     "text": "Responses vary a lot between people."
+    },
+    {
+     "type": "body",
+     "title": "Our view",
+     "text": "Try it consistently and notice what it does for you."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "No hype. Just try it and trust what you feel 🧪"
+  },
+  {
+   "id": "nf-017",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Visualising in beta vs theta"
+    },
+    {
+     "type": "body",
+     "title": "In beta",
+     "text": "Your inner critic interrupts every picture."
+    },
+    {
+     "type": "body",
+     "title": "You try harder",
+     "text": "It feels like pretending."
+    },
+    {
+     "type": "body",
+     "title": "In theta",
+     "text": "Images arrive on their own and feel emotional."
+    },
+    {
+     "type": "body",
+     "title": "The difference",
+     "text": "Less effort, more feeling."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Same vision board, very different results 🌙"
+  },
+  {
+   "id": "nf-018",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "How long should a session be?"
+    },
+    {
+     "type": "body",
+     "title": "Starting out",
+     "text": "15 to 20 minutes is plenty."
+    },
+    {
+     "type": "body",
+     "title": "Settling in",
+     "text": "Your brain may take a few minutes to follow the beat."
+    },
+    {
+     "type": "body",
+     "title": "Building up",
+     "text": "30 minutes once it feels familiar."
+    },
+    {
+     "type": "body",
+     "title": "Consistency",
+     "text": "Short and daily works better than long and rare."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Start small. Stay consistent 🎧"
+  },
+  {
+   "id": "nf-019",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Binaural beats aren't background music"
+    },
+    {
+     "type": "body",
+     "title": "It's a practice",
+     "text": "Treat it like a session, not a playlist."
+    },
+    {
+     "type": "body",
+     "title": "Be still",
+     "text": "Lie down or sit comfortably."
+    },
+    {
+     "type": "body",
+     "title": "Eyes closed",
+     "text": "Less input, deeper state."
+    },
+    {
+     "type": "body",
+     "title": "Come back slowly",
+     "text": "Take a minute before you jump back into your day."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Give it your full attention and it gives you more back 🌊"
+  },
+  {
+   "id": "nf-020",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Why a dedicated app instead of free videos"
+    },
+    {
+     "type": "body",
+     "title": "No interruptions",
+     "text": "Nothing breaks your state halfway through."
+    },
+    {
+     "type": "body",
+     "title": "Built for it",
+     "text": "Sessions designed around specific brainwave ranges."
+    },
+    {
+     "type": "body",
+     "title": "Your library",
+     "text": "Save what works and come back to it."
+    },
+    {
+     "type": "body",
+     "title": "NeuroFusion",
+     "text": "Our layered two frequency sessions, in one place."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Your practice deserves an uninterrupted space 🎧"
+  }
+ ]
+}
