@@ -1,0 +1,67 @@
+name: WealthWave FM daily posts
+
+on:
+  schedule:
+    # Times are UTC. In UK summer time: 17:00 UTC = 6pm, 20:00 UTC = 9pm.
+    - cron: "0 17 * * *"   # MeAffirmation, 6pm UK
+    - cron: "0 20 * * *"   # NeuroFusion, 9pm UK
+  workflow_dispatch:
+    inputs:
+      brand:
+        description: "Which brand?"
+        type: choice
+        options: ["neurofusion", "meaffirmation"]
+        default: "neurofusion"
+      test:
+        description: "Test run? (posts privately, only you can see it)"
+        type: choice
+        options: ["true", "false"]
+        default: "true"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wealthwave-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tools
+        run: pip install pillow requests
+
+      - name: Get fonts
+        run: |
+          mkdir -p fonts
+          base=https://raw.githubusercontent.com/google/fonts/main/ofl
+          curl -sSfL -o fonts/Poppins-Bold.ttf         "$base/poppins/Poppins-Bold.ttf"
+          curl -sSfL -o fonts/Poppins-Medium.ttf       "$base/poppins/Poppins-Medium.ttf"
+          curl -sSfL -o fonts/Lora-Variable.ttf        "$base/lora/Lora%5Bwght%5D.ttf"
+          curl -sSfL -o fonts/Lora-Italic-Variable.ttf "$base/lora/Lora-Italic%5Bwght%5D.ttf"
+
+      - name: Post the next slideshow
+        env:
+          UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
+          UPLOAD_POST_USER: ${{ secrets.UPLOAD_POST_USER }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BRAND: ${{ github.event_name == 'workflow_dispatch' && inputs.brand || (github.event.schedule == '0 17 * * *' && 'meaffirmation' || 'neurofusion') }}
+          TEST_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.test || 'false' }}
+        run: python post_next.py
+
+      - name: Remember what was posted
+        run: |
+          git config user.name "wealthwave-agent"
+          git config user.email "agent@users.noreply.github.com"
+          git add bank_*.json
+          ls state_*.json >/dev/null 2>&1 && git add state_*.json
+          git diff --cached --quiet || git commit -m "Posted + updated bank"
+          git pull --rebase
+          git push
