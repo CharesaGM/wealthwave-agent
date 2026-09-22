@@ -149,7 +149,7 @@ def post(show, bank):
 
 def wait_for_tiktok(request_id):
     """Upload-Post finishes the TikTok hand-off in the background.
-    Check back until it's done, so a rejected post shows as a failed run."""
+    Check back until it's truly finished, so a rejected post shows as a failed run."""
     import time
     headers = {"Authorization": "Apikey " + os.environ["UPLOAD_POST_API_KEY"]}
     for attempt in range(24):                      # up to ~6 minutes
@@ -157,18 +157,25 @@ def wait_for_tiktok(request_id):
         try:
             s = requests.get("https://api.upload-post.com/api/uploadposts/status",
                              params={"request_id": request_id}, headers=headers, timeout=60)
-        except requests.RequestException as e:
+            body = s.json()
+        except Exception as e:
             print("Status check hiccup, retrying:", e)
             continue
-        text = s.text
-        low = text.lower().replace(" ", "")
-        print(f"Status check {attempt + 1}:", s.status_code, text[:600])
-        if any(k in low for k in ['"status":"failed"', '"status":"error"', '"success":false']):
+        status = str(body.get("status", "")).lower()
+        failed = body.get("failed") or 0
+        print(f"Status check {attempt + 1}: {status or 'unknown'} "
+              f"(completed {body.get('completed')}, failed {failed})")
+        if status in ("processing", "pending", "queued", "running", ""):
+            continue                               # still working, check again
+        if failed:
+            print(json.dumps(body)[:1500])
             raise SystemExit("TikTok did not accept the post (details above). Nothing marked as posted.")
-        if any(k in low for k in ['"status":"completed"', '"status":"success"', '"status":"published"',
-                                  '"status":"done"', '"status":"finished"']):
+        if status in ("completed", "success", "published", "done", "finished"):
             print("Confirmed: TikTok accepted the post.")
             return
+        if status in ("failed", "error"):
+            print(json.dumps(body)[:1500])
+            raise SystemExit("TikTok did not accept the post (details above). Nothing marked as posted.")
     print("Still processing after 6 minutes. Check Upload-Post for the final result.")
 
 
