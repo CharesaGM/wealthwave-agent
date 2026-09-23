@@ -1,20 +1,14 @@
-name: WealthWave FM daily posts
+name: WealthWave FM weekly scheduler
 
 on:
   schedule:
-    # Times are UTC. In UK summer time: 17:09 UTC = about 6pm, 20:23 UTC = about 9pm.
-    # The odd minutes avoid GitHub's busy on-the-hour queue.
-    - cron: "9 17 * * *"    # MeAffirmation, about 6pm UK
-    - cron: "23 20 * * *"   # NeuroFusion, about 9pm UK
+    # Once a week, Sunday morning. It queues the following 7 days into
+    # Upload-Post, which then publishes each post at the exact time.
+    - cron: "17 9 * * 0"
   workflow_dispatch:
     inputs:
-      brand:
-        description: "Which brand?"
-        type: choice
-        options: ["neurofusion", "meaffirmation"]
-        default: "neurofusion"
       test:
-        description: "Test run? (posts privately, only you can see it)"
+        description: "Test run? (queues ONE private post 15 minutes from now)"
         type: choice
         options: ["true", "false"]
         default: "true"
@@ -23,11 +17,11 @@ permissions:
   contents: write
 
 concurrency:
-  group: wealthwave-post
+  group: wealthwave-schedule
   cancel-in-progress: false
 
 jobs:
-  post:
+  schedule:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -48,21 +42,21 @@ jobs:
           curl -sSfL -o fonts/Lora-Variable.ttf        "$base/lora/Lora%5Bwght%5D.ttf"
           curl -sSfL -o fonts/Lora-Italic-Variable.ttf "$base/lora/Lora-Italic%5Bwght%5D.ttf"
 
-      - name: Post the next slideshow
+      - name: Queue the week
         env:
           UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
           UPLOAD_POST_USER: ${{ secrets.UPLOAD_POST_USER }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          BRAND: ${{ github.event_name == 'workflow_dispatch' && inputs.brand || (github.event.schedule == '0 17 * * *' && 'meaffirmation' || 'neurofusion') }}
           TEST_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.test || 'false' }}
-        run: python post_next.py
+        run: python schedule_week.py
 
-      - name: Remember what was posted
+      - name: Remember what was queued
+        if: always()
         run: |
           git config user.name "wealthwave-agent"
           git config user.email "agent@users.noreply.github.com"
-          git add bank_*.json
-          ls state_*.json >/dev/null 2>&1 && git add state_*.json
-          git diff --cached --quiet || git commit -m "Posted + updated bank"
+          git add bank*.json
+          ls state*.json >/dev/null 2>&1 && git add state*.json
+          git diff --cached --quiet || git commit -m "Queued a week of posts"
           git pull --rebase
           git push
