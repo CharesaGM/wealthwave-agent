@@ -316,6 +316,78 @@ def height(text, fnt, width, gap=1.25):
     return len(textwrap.wrap(text, width=width)) * int(fnt.size * gap)
 
 
+# ---------- the "how it works" diagram (NeuroFusion) ----------
+def state_name(hz):
+    if hz < 4:
+        return "DELTA", "deep sleep"
+    if hz < 8:
+        return "THETA", "dreamlike, visualisation, the void"
+    if hz < 13:
+        return "ALPHA", "calm, relaxed focus"
+    return "BETA", "alert, switched on"
+
+
+def ear_wave(d, x0, x1, yc, cycles, amp, colour, alpha=235, width=5):
+    prev = None
+    for x in range(int(x0), int(x1) + 1, 3):
+        y = yc + amp * math.sin(2 * math.pi * cycles * (x - x0) / (x1 - x0))
+        if prev:
+            d.line([prev, (x, y)], fill=colour + (alpha,), width=width)
+        prev = (x, y)
+
+
+def draw_diagram(img, t, slide):
+    """Left ear tone, right ear tone, the brain creates the third beat."""
+    left, right = int(slide["left"]), int(slide["right"])
+    beat = abs(right - left)
+    name, feel = state_name(beat)
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    fl, fn, fs = font("medium", 36), font("bold", 64), font("serif", 44)
+
+    title = slide.get("title", "How it works").upper()
+    ft = font("medium", 44)
+    d.text(((W - d.textlength(title, font=ft)) / 2, 150), title, font=ft, fill=t["accent"] + (255,))
+    d.line((W / 2 - 60, 228, W / 2 + 60, 228), fill=t["accent"] + (255,), width=3)
+
+    # two ears, two tones
+    for cx, hz, col, lab in [(W * 0.25, left, t["accent"], "LEFT EAR"),
+                             (W * 0.75, right, t["accent2"], "RIGHT EAR")]:
+        d.ellipse((cx - 70, 300, cx + 70, 440), outline=col + (255,), width=5)
+        d.arc((cx - 40, 330, cx + 40, 410), 100, 260 if cx < W / 2 else 440, fill=col + (200,), width=4)
+        d.text((cx - d.textlength(lab, font=fl) / 2, 460), lab, font=fl, fill=t["muted"] + (255,))
+        txt = f"{hz} Hz"
+        d.text((cx - d.textlength(txt, font=fn) / 2, 510), txt, font=fn, fill=col + (255,))
+        ear_wave(d, cx - 190, cx + 190, 660, 9 if cx < W / 2 else 10, 34, col)
+
+    # arrows into the brain
+    for sx in (W * 0.25, W * 0.75):
+        d.line([(sx, 730), (W / 2, 850)], fill=t["muted"] + (200,), width=4)
+    d.polygon([(W / 2 - 16, 836), (W / 2 + 16, 836), (W / 2, 862)], fill=t["muted"] + (220,))
+
+    # the brain: two hemispheres moving together
+    cx, cy = W / 2, 1000
+    d.ellipse((cx - 230, cy - 130, cx - 6, cy + 130), outline=t["accent"] + (255,), width=5)
+    d.ellipse((cx + 6, cy - 130, cx + 230, cy + 130), outline=t["accent2"] + (255,), width=5)
+    for k in range(3):
+        yy = cy - 60 + k * 60
+        d.arc((cx - 200, yy - 30, cx - 40, yy + 30), 200, 340, fill=t["accent"] + (150,), width=3)
+        d.arc((cx + 40, yy - 30, cx + 200, yy + 30), 200, 340, fill=t["accent2"] + (150,), width=3)
+
+    # the third beat
+    ear_wave(d, 140, W - 140, 1230, 3, 46, (255, 255, 255), 240, 6)
+    txt = f"{beat} Hz"
+    fb = font("bold", 96)
+    d.text(((W - d.textlength(txt, font=fb)) / 2, 1300), txt, font=fb, fill=(255, 255, 255, 255))
+    sub = "the beat your brain creates"
+    d.text(((W - d.textlength(sub, font=fs)) / 2, 1420), sub, font=fs, fill=t["text"] + (255,))
+    st = f"{name}  ·  {feel}"
+    d.text(((W - d.textlength(st, font=fl)) / 2, 1500), st, font=fl, fill=t["accent"] + (255,))
+    if slide.get("text"):
+        centred(d, slide["text"], font("serif", 40), t["text"] + (255,), 1590, 34, 1.3)
+    return glow_layer(img, layer, 5)
+
+
 def render_slide(slide, idx, total, brand, show_id="x"):
     theme_name = brand["theme"]
     t = THEMES[theme_name]
@@ -324,7 +396,12 @@ def render_slide(slide, idx, total, brand, show_id="x"):
     img = bg_fn(t, rnd)
     d = ImageDraw.Draw(img)
 
-    if slide["type"] == "hook":
+    if slide["type"] == "diagram":
+        img = vertical_glow(t, [((-200, 900, W + 200, H + 300), (30, 18, 80)),
+                                ((150, 150, 930, 900), (12, 50, 70))])
+        img = draw_diagram(stars(img, rnd, n=60, top=H), t, slide)
+        d = ImageDraw.Draw(img)
+    elif slide["type"] == "hook":
         f = font(hook_font, 82 if hook_font == "bold" else 76)
         wrap = 19 if hook_font == "bold" else 21
         h = height(slide["text"], f, wrap, 1.2)
