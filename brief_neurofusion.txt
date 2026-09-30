@@ -1,9 +1,24 @@
 BRAND: NeuroFusion(TM) by WealthWave FM. Paid subscription web app at wealthwavefm.netlify.app.
+
 WHAT IT IS: Layered two-frequency audio sessions. One frequency in the left ear, a slightly different one in the right; the brain perceives a third "beat" at the difference (e.g. 200 Hz + 210 Hz = 10 Hz). Headphones required. Subscribers also get the binaural beats library, Solfeggio frequencies and ambient soundscapes.
-WHAT WE SELL THROUGH: information and curiosity, not discounts or free trials. Never mention the free trial.
-ANGLES: how binaural beats work; brainwave states (beta, alpha, theta, delta); theta and manifestation/visualisation; meditation without years of practice; reaching "the void" / mind awake body asleep; intention setting; sleep wind-down; focus; first-session experiences; honest science; Robert Monroe and the Monroe Institute's hemispheric synchronisation research (1970s, Virginia) as history; the 1983 US Army "Analysis and Assessment of Gateway Process" report, declassified 2003, in the CIA's public reading room.
+
+THE STORY WE TELL: NeuroFusion is built on the same brainwave principle Robert Monroe spent decades researching at the Monroe Institute in Virginia in the 1970s: two tones, one per ear, so the brain creates a third beat and both hemispheres move into the same rhythm. In 1983 a US Army officer wrote "Analysis and Assessment of Gateway Process", a report on that research. It was declassified in 2003 and anyone can read it today in the CIA's public reading room (search "Gateway Process CIA reading room"). That is the hook: this is not a random YouTube track, it is the same technology principle that the US government once studied, now in your headphones.
+
+WHAT WE SELL THROUGH: information and curiosity, not discounts or free trials. Never mention the free trial. Every post should leave people thinking "I need to try this".
+
+WEEKLY MIX (every batch of 7 posts must follow this):
+- 2 x THE MONROE / GATEWAY STORY: who Robert Monroe was, what the Gateway research explored, Focus 10 "mind awake, body asleep", why the Army studied it, the 1983 report, declassified in 2003, "you can Google it yourself". End by linking it to NeuroFusion: built on the same principle.
+- 1 x HOW IT WORKS (diagram style): left ear tone, right ear tone, the brain creates the third beat. Walk it step by step with the numbers (e.g. 200 Hz left, 210 Hz right, 10 Hz felt). Then what each brainwave state feels like (beta, alpha, theta, delta).
+- 3 x NEUROFUSION ITSELF: why layered two-frequency sessions are rare, how to use a session (headphones, lie down, set an intention, eyes closed), reaching "the void", theta and visualisation, first-session experiences, why it is different from generic binaural tracks.
+- 1 x GENERAL BINAURAL BEATS: an entry-level explainer for people new to the topic (focus, sleep wind-down, meditation without years of practice).
+
+TONE: confident, intriguing, premium. Short punchy lines. Speak like someone letting you in on something most people do not know.
+
+CTA: NeuroFusion at wealthwavefm.netlify.app, link in bio. Headphones on.
+
 HARD RULES:
-- Never use the word "Hemi-Sync" (Monroe Institute trademark). Never imply NeuroFusion is affiliated with or endorsed by the Monroe Institute, the CIA or the US Army.
+- Never use the word "Hemi-Sync" (Monroe Institute trademark). Never imply NeuroFusion is affiliated with or endorsed by the Monroe Institute, the CIA or the US Army. Say "built on the same principle", never "the same product" or "their technology".
 - No medical claims. Never say it cures, treats or guarantees anything. Use "designed to", "many listeners", "people use it for". Research is mixed; say so if science comes up.
 - Never suggest listening while driving or operating anything.
-- Never claim the CIA suppressed or hid the technology.
+- Never claim the CIA suppressed or hid the technology. It was studied, documented, and declassified.
+- No dashes of any kind.
