@@ -678,6 +678,468 @@
     }
    ],
    "caption": "Your dreams deserve somewhere to be said 🤍"
+  },
+  {
+   "id": "me-021-proud-without-permission",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "You don't need permission to feel proud."
+    },
+    {
+     "type": "body",
+     "title": "Own The Moment",
+     "text": "Say what you accomplished out loud before you let anyone shrink it."
+    },
+    {
+     "type": "body",
+     "title": "No Audience Needed",
+     "text": "Pride does not require applause, just a place to say it once."
+    },
+    {
+     "type": "body",
+     "title": "Make It Real",
+     "text": "Speaking it locks it in as truth, not just a passing thought."
+    },
+    {
+     "type": "body",
+     "title": "Keep The Proof",
+     "text": "Save the riff so you can hear your own pride later."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Your win, your voice, your rules. 🎤"
+  },
+  {
+   "id": "me-022-not-a-voice-memo",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "That voice memo app was never built for this."
+    },
+    {
+     "type": "body",
+     "title": "Built For You",
+     "text": "MeAffirmation is a private space made just for speaking your truth."
+    },
+    {
+     "type": "body",
+     "title": "No Clutter",
+     "text": "No grocery lists mixed in, just your declarations and dreams."
+    },
+    {
+     "type": "body",
+     "title": "Keep Or Release",
+     "text": "Save it forever or send it anonymously into the void."
+    },
+    {
+     "type": "body",
+     "title": "Ten Minutes Yours",
+     "text": "Record up to ten minutes whenever the words need to come out."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Finally, an app that gets what your voice notes are really for. 🗣️"
+  },
+  {
+   "id": "me-023-before-the-doubt-wakes",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Say the dream before the doubt wakes up."
+    },
+    {
+     "type": "body",
+     "title": "Morning Window",
+     "text": "The first few minutes awake are the clearest, before the noise starts."
+    },
+    {
+     "type": "body",
+     "title": "Speak It First",
+     "text": "Say your dream out loud before anyone else gets to weigh in."
+    },
+    {
+     "type": "body",
+     "title": "Claim The Day",
+     "text": "Your voice sets the tone before your inbox or feed does."
+    },
+    {
+     "type": "body",
+     "title": "Come Back Later",
+     "text": "Listen back on the days doubt tries to win."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Beat the doubt to the punch every single morning. 🌅"
+  },
+  {
+   "id": "me-024-zero-witnesses",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Some wins deserve zero witnesses."
+    },
+    {
+     "type": "body",
+     "title": "Private Celebration",
+     "text": "Not every win needs a caption or a group chat announcement."
+    },
+    {
+     "type": "body",
+     "title": "Say It Solo",
+     "text": "Record the moment for yourself, no reactions required."
+    },
+    {
+     "type": "body",
+     "title": "Still Counts",
+     "text": "A win said quietly is still a win that happened."
+    },
+    {
+     "type": "body",
+     "title": "Yours To Keep",
+     "text": "Keep the recording private or let it go into the void."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Not every celebration needs an audience. Some are just for you. 🎉"
+  },
+  {
+   "id": "me-025-let-it-hear-this",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Your phone hears everything. Let it hear this."
+    },
+    {
+     "type": "body",
+     "title": "Redirect The Mic",
+     "text": "Instead of another rant text, say it into your own private riff."
+    },
+    {
+     "type": "body",
+     "title": "No Judgment",
+     "text": "Your phone will not text back, argue, or repeat it to anyone."
+    },
+    {
+     "type": "body",
+     "title": "Real Time Release",
+     "text": "Get it out the second it happens, no waiting for a reply."
+    },
+    {
+     "type": "body",
+     "title": "Delete Or Keep",
+     "text": "Decide after if you want to save it or release it."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Let your phone hold the words for once. 📱"
+  },
+  {
+   "id": "me-026-pep-talk-that-sounds-like-you",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "What if your pep talk actually sounded like you."
+    },
+    {
+     "type": "body",
+     "title": "Ditch The Script",
+     "text": "Scripted affirmations can feel stiff, your own words never do."
+    },
+    {
+     "type": "body",
+     "title": "Riff Instead",
+     "text": "Talk it out loud like you would to a friend, not a mantra."
+    },
+    {
+     "type": "body",
+     "title": "Your Tone",
+     "text": "Your voice, your slang, your pace, that is what sticks."
+    },
+    {
+     "type": "body",
+     "title": "Say It Rough",
+     "text": "It does not need to be perfect, it just needs to be true."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Real affirmations sound like you, not a poster. ✨"
+  },
+  {
+   "id": "me-027-future-you-is-listening",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "The version of you a year from now is listening."
+    },
+    {
+     "type": "body",
+     "title": "Leave A Trace",
+     "text": "Record where you are now so future you can hear the growth."
+    },
+    {
+     "type": "body",
+     "title": "Time Capsule",
+     "text": "A ten minute riff today becomes proof of progress later."
+    },
+    {
+     "type": "body",
+     "title": "Check In",
+     "text": "Come back to old recordings and hear how far you have come."
+    },
+    {
+     "type": "body",
+     "title": "Start Today",
+     "text": "The riff you make now is a gift to the you ahead."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Future you is going to want to hear this one. ⏳"
+  },
+  {
+   "id": "me-028-rehearsed-it-all-day",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "You rehearsed it in your head all day. Now say it."
+    },
+    {
+     "type": "body",
+     "title": "Get It Out",
+     "text": "The thoughts you kept replaying deserve an actual voice, not just silence."
+    },
+    {
+     "type": "body",
+     "title": "No Perfect Wording",
+     "text": "You do not need the exact right words, just the real ones."
+    },
+    {
+     "type": "body",
+     "title": "Press Record",
+     "text": "Ten minutes is all it takes to finally let it out."
+    },
+    {
+     "type": "body",
+     "title": "Feel Lighter",
+     "text": "Saying it once out loud can quiet the loop in your head."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Stop rehearsing, start recording. 🎙️"
+  },
+  {
+   "id": "me-029-no-clapping-required",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Nobody needs to clap for this to be real."
+    },
+    {
+     "type": "body",
+     "title": "Validation Optional",
+     "text": "Your progress is real whether or not anyone acknowledges it."
+    },
+    {
+     "type": "body",
+     "title": "Say It Anyway",
+     "text": "Speak your win even if there is no one to cheer for you."
+    },
+    {
+     "type": "body",
+     "title": "Private Proof",
+     "text": "Keep the recording as your own evidence that it happened."
+    },
+    {
+     "type": "body",
+     "title": "Let It Go",
+     "text": "Or release it anonymously and let the moment exist somewhere else."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "You do not need a crowd to make it count. 👏"
+  },
+  {
+   "id": "me-030-too-loud-for-texts",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Some thoughts are too loud for text messages."
+    },
+    {
+     "type": "body",
+     "title": "Beyond Typing",
+     "text": "Some feelings need volume and tone, not just words on a screen."
+    },
+    {
+     "type": "body",
+     "title": "Say Not Type",
+     "text": "Speak the big stuff instead of shrinking it into a message."
+    },
+    {
+     "type": "body",
+     "title": "No Reply Needed",
+     "text": "Say it fully without worrying how someone else will respond."
+    },
+    {
+     "type": "body",
+     "title": "Full Volume",
+     "text": "Let it out at whatever volume it actually deserves."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Some things need more than a text box. 🔊"
+  },
+  {
+   "id": "me-031-dont-owe-the-news",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "You don't owe anyone the good news."
+    },
+    {
+     "type": "body",
+     "title": "Tell Yourself First",
+     "text": "You can say it out loud before deciding who else gets to know."
+    },
+    {
+     "type": "body",
+     "title": "No Obligation",
+     "text": "Good news is not a debt you have to pay to others."
+    },
+    {
+     "type": "body",
+     "title": "Savor It",
+     "text": "Keep the moment just for you a little longer if you want."
+    },
+    {
+     "type": "body",
+     "title": "Share Later",
+     "text": "You can always tell people after you have told yourself."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "The good news is yours first. 🎉"
+  },
+  {
+   "id": "me-032-silence-isnt-doubt",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Silence is not the same as doubt."
+    },
+    {
+     "type": "body",
+     "title": "Quiet Confidence",
+     "text": "You can believe in something fully and still not announce it yet."
+    },
+    {
+     "type": "body",
+     "title": "Say It Privately",
+     "text": "Confirm it to yourself before the world gets a say."
+    },
+    {
+     "type": "body",
+     "title": "Protect The Dream",
+     "text": "Some plans grow stronger when they are not exposed too soon."
+    },
+    {
+     "type": "body",
+     "title": "Speak To Build",
+     "text": "Use your voice to strengthen it, not to prove it to others."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Moving quiet does not mean staying unsure. 🤫"
+  },
+  {
+   "id": "me-033-talking-to-yourself-underrated",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Talking to yourself is underrated."
+    },
+    {
+     "type": "body",
+     "title": "Old Habit",
+     "text": "You already talk to yourself all day, this just makes it count."
+    },
+    {
+     "type": "body",
+     "title": "Say It Out",
+     "text": "Turning inner thoughts into spoken words makes them feel more real."
+    },
+    {
+     "type": "body",
+     "title": "No One Watching",
+     "text": "Do it alone, out loud, with nobody there to judge the words."
+    },
+    {
+     "type": "body",
+     "title": "Try It Once",
+     "text": "Ten minutes of talking to yourself might surprise you."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Talking to yourself just got an upgrade. 🎤"
+  },
+  {
+   "id": "me-034-comeback-starts-whisper",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "The comeback starts with a whisper."
+    },
+    {
+     "type": "body",
+     "title": "Start Small",
+     "text": "You do not need a big speech, just a few honest words."
+    },
+    {
+     "type": "body",
+     "title": "Say It Quiet",
+     "text": "A whispered declaration still counts as the first step forward."
+    },
+    {
+     "type": "body",
+     "title": "Build Momentum",
+     "text": "Each time you say it, it gets a little louder in your head."
+    },
+    {
+     "type": "body",
+     "title": "Keep Going",
+     "text": "Come back and add to it whenever you need the reminder."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Every comeback starts somewhere quiet. 🌱"
   }
  ]
 }
