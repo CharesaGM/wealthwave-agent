@@ -33,14 +33,14 @@ STREAMS = [
 #   diagram : how it works, left ear + right ear = the third beat (drawn as a diagram)
 #   product : NeuroFusion itself, why it is rare, how to use a session, the void
 #   general : entry level binaural beats (old posts without a kind count as this)
-NF_BATCH = {"story": 4, "diagram": 2, "product": 6, "general": 2}
+NF_BATCH = {"story": 2, "diagram": 1, "product": 3, "general": 1}   # 7 at a time so the writer never runs out of room
 NF_BANNED = ["hemi-sync", "hemi sync", "hemisync", "cure", "cures", "treat", "treats", "treatment",
              "guarantee", "guaranteed", "driving", "free trial", "suppressed", "suppress"]
 
 DELIVEROO_DAYS = set()         # only used by Hyde's; empty means never
 ORDER_LINE = ""                # extra line added to captions; empty means none
 REFILL_WHEN_LEFT = 8           # write more slideshows when this many are left
-REFILL_COUNT = 14
+REFILL_COUNT = 7               # fewer at a time so the writer never runs out of room
 REFILL_ROUNDS = 3              # full batches it may write in one run
 # =============================================================================
 
@@ -108,7 +108,8 @@ def refill(stream, bank, posted):
             return False
     elif len(left) >= REFILL_WHEN_LEFT:
         return False
-    key = os.environ.get("ANTHROPIC_API_KEY")
+    # strip any stray spaces or line breaks that came in when the secret was pasted
+    key = "".join((os.environ.get("ANTHROPIC_API_KEY") or "").split())
     if not key:
         print(f"  only {len(left)} slideshows left and no ANTHROPIC_API_KEY set")
         return False
@@ -156,16 +157,25 @@ Return ONLY a JSON array, no other text:
 BRAND BRIEF:
 {brief}
 """
-    r = requests.post("https://api.anthropic.com/v1/messages",
-                      headers={"x-api-key": key, "anthropic-version": "2023-06-01",
-                               "content-type": "application/json"},
-                      json={"model": "claude-sonnet-5", "max_tokens": 16000,
-                            "messages": [{"role": "user", "content": prompt}]}, timeout=600)
-    r.raise_for_status()
-    text = re.sub(r"```(json)?", "", "".join(b.get("text", "") for b in r.json()["content"])).strip()
+    try:
+        r = requests.post("https://api.anthropic.com/v1/messages",
+                          headers={"x-api-key": key, "anthropic-version": "2023-06-01",
+                                   "content-type": "application/json"},
+                          json={"model": "claude-sonnet-5", "max_tokens": 16000,
+                                "messages": [{"role": "user", "content": prompt}]}, timeout=600)
+        r.raise_for_status()
+        reply = r.json()
+        text = re.sub(r"```(json)?", "", "".join(b.get("text", "") for b in reply.get("content", []))).strip()
+        if "[" not in text:
+            raise ValueError(f"no list in the reply (stop: {reply.get('stop_reason')}): {text[:200]!r}")
+        new = json.loads(text[text.index("["): text.rindex("]") + 1])
+    except Exception as e:
+        # never let the writer stop the posts: carry on with what's already in the bank
+        print(f"  couldn't write new slideshows ({str(e)[:200]}), carrying on with the {len(left)} left")
+        return False
     existing = {s["id"] for s in bank["slideshows"]}
     added = 0
-    for s in json.loads(text):
+    for s in new:
         if not valid_show(s, bank, stream):
             continue
         base = re.sub(r"[^a-z0-9-]", "", str(s["id"]).lower())[:40] or "post"
@@ -176,6 +186,25 @@ BRAND BRIEF:
     print(f"  wrote {added} new slideshows")
     return added > 0
 
+
+
+# ---------- never run dry: bring back older posts ----------
+RECYCLE_GAP = 21               # an old post can come back once 21 newer ones have gone out
+
+
+def recycle(bank, posted_list, todo, need):
+    """If the bank can't fill the week, reuse the longest-ago posts (with a fresh date), oldest first."""
+    if len(todo) >= need:
+        return todo
+    history = list(dict.fromkeys(posted_list))
+    gap = max(0, min(RECYCLE_GAP, len(history) - need))   # shrink the gap if history is short
+    recent = set(history[-gap:]) if gap else set()
+    by_id = {s["id"]: s for s in bank["slideshows"]}
+    old = [by_id[i] for i in history if i in by_id and i not in recent]
+    extra = [s for s in old if s not in todo][:need - len(todo)]
+    if extra:
+        print(f"  bank is low, bringing back {len(extra)} older post(s) so no day is missed")
+    return todo + extra
 
 # ---------- scheduling one post ----------
 def schedule_one(show, bank, stream, when_local):
@@ -259,8 +288,9 @@ def pick(todo, stream, when_local):
                  [s for s in todo if kind_of(s) != "general"],
                  todo):
         if pool:
-            todo.remove(pool[0])
-            return pool[0]
+            chosen = pool[0]             # take it before removing (the last pool IS todo)
+            todo.remove(chosen)
+            return chosen
 
 
 def main():
@@ -280,6 +310,12 @@ def main():
             save(stream["bank"], bank)
 
         todo = [s for s in bank["slideshows"] if s["id"] not in posted and valid_show(s, bank, stream)]
+        if not TEST_MODE:
+            slots_left = sum(1 for day in range(DAYS_AHEAD)
+                             if (now + timedelta(days=day)).replace(hour=stream["hour"], minute=stream["minute"],
+                                                                    second=0, microsecond=0) > now + timedelta(minutes=10))
+            todo = recycle(bank, state["posted"], todo, slots_left)
+            todo = [s for s in todo if valid_show(s, bank, stream)]
         if not todo:
             print("  nothing left to post; add ANTHROPIC_API_KEY so it can write more")
             continue
