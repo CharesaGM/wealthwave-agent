@@ -454,3 +454,47 @@ def render_show(show, brand):
     with open(os.path.join(out, "caption.txt"), "w") as fh:
         fh.write(show["caption"] + "\n\n" + " ".join(brand["hashtags"]) + "\n")
     return out
+
+
+# ---------- slideshow -> video with a binaural beat underneath (NeuroFusion) ----------
+import subprocess
+
+
+def ffmpeg_exe():
+    try:
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except Exception:
+        return "ffmpeg"
+
+
+def make_short(images, out_path, seconds_each=4.5, beat=6.0, carrier=200.0):
+    """Slow push-in on each slide, soft fades between them, and a binaural bed underneath:
+    carrier Hz in the left ear, carrier+beat Hz in the right, with a soft brown-noise pad.
+    Same recipe as the quote-of-the-day videos."""
+    fps = 30
+    frames = int(seconds_each * fps)
+    total = seconds_each * len(images)
+    cmd = [ffmpeg_exe(), "-y", "-loglevel", "error"]
+    for p in images:
+        cmd += ["-i", p]
+    cmd += ["-f", "lavfi", "-t", str(total), "-i", f"sine=frequency={carrier}:sample_rate=44100",
+            "-f", "lavfi", "-t", str(total), "-i", f"sine=frequency={carrier + beat}:sample_rate=44100",
+            "-f", "lavfi", "-t", str(total), "-i", "anoisesrc=color=brown:amplitude=0.25:sample_rate=44100"]
+    parts = []
+    for i in range(len(images)):
+        parts.append(
+            f"[{i}:v]scale=1620:2880,zoompan=z='min(1+on*0.0007,1.08)':d={frames}"
+            f":x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1080x1920:fps={fps},"
+            f"fade=t=in:st=0:d=0.35,fade=t=out:st={seconds_each - 0.35}:d=0.35,setsar=1[v{i}]")
+    n = len(images)
+    parts.append("".join(f"[v{i}]" for i in range(n)) + f"concat=n={n}:v=1:a=0,format=yuv420p[v]")
+    parts.append(f"[{n}:a][{n + 1}:a]join=inputs=2:channel_layout=stereo,volume=0.12[bin]")
+    parts.append(f"[{n + 2}:a]lowpass=f=400,volume=0.06,aformat=channel_layouts=stereo[pad]")
+    parts.append(f"[bin][pad]amix=inputs=2:normalize=0,afade=t=in:d=1.5,"
+                 f"afade=t=out:st={max(total - 2, 0)}:d=2[a]")
+    cmd += ["-filter_complex", ";".join(parts), "-map", "[v]", "-map", "[a]",
+            "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-r", str(fps),
+            "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", "-shortest", out_path]
+    subprocess.run(cmd, check=True)
+    return out_path

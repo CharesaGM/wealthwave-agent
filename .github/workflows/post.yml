@@ -12,6 +12,10 @@ on:
         type: choice
         options: ["true", "false"]
         default: "true"
+      only:
+        description: "Only redo one stream? (leave blank for all, or type neurofusion / meaffirmation)"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -31,7 +35,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install tools
-        run: pip install pillow requests
+        run: pip install pillow requests imageio-ffmpeg
 
       - name: Get fonts
         run: |
@@ -48,6 +52,7 @@ jobs:
           UPLOAD_POST_USER: ${{ secrets.UPLOAD_POST_USER }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TEST_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.test || 'false' }}
+          ONLY_STREAM: ${{ inputs.only || '' }}
         run: python schedule_week.py
 
       - name: Remember what was queued

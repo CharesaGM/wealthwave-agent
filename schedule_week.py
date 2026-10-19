@@ -24,6 +24,7 @@ STREAMS = [
      "brief": "brief_meaffirmation.txt", "hour": 18, "minute": 0, "platforms": ["tiktok"]},
     {"name": "neurofusion", "bank": "bank_neurofusion.json", "state": "state_neurofusion.json",
      "brief": "brief_neurofusion.txt", "hour": 21, "minute": 0, "platforms": ["tiktok"],
+     "video": True,   # posts as a video with a real binaural beat playing underneath (headphones on)
      # what kind of post goes out each day (Mon=0 ... Sun=6)
      "mix": {0: "product", 1: "story", 2: "product", 3: "diagram", 4: "story", 5: "product", 6: "general"}},
 ]
@@ -37,6 +38,12 @@ NF_BATCH = {"story": 2, "diagram": 1, "product": 3, "general": 1}   # 7 at a tim
 NF_BANNED = ["hemi-sync", "hemi sync", "hemisync", "cure", "cures", "treat", "treats", "treatment",
              "guarantee", "guaranteed", "driving", "free trial", "suppressed", "suppress"]
 
+# NeuroFusion videos: which binaural beat plays underneath each kind of post (Hz difference between the ears).
+# A "diagram" post plays the exact tones its diagram shows (e.g. 200 Hz left, 210 Hz right = 10 Hz).
+NF_BEATS = {"story": 6.0, "product": 6.0, "general": 10.0}   # 6 Hz theta, 10 Hz alpha
+NF_CARRIER = 200.0
+NF_SECONDS_PER_SLIDE = 4.5     # 6 slides = 27 seconds, long enough to read and to feel the beat
+
 DELIVEROO_DAYS = set()         # only used by Hyde's; empty means never
 ORDER_LINE = ""                # extra line added to captions; empty means none
 REFILL_WHEN_LEFT = 8           # write more slideshows when this many are left
@@ -49,6 +56,8 @@ from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 import requests
 import engine
+
+ONLY_STREAM = (os.environ.get("ONLY_STREAM") or "").strip().lower()   # e.g. "neurofusion" to redo just that one
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TEST_MODE = os.environ.get("TEST_MODE", "false").lower() == "true"
@@ -206,6 +215,37 @@ def recycle(bank, posted_list, todo, need):
         print(f"  bank is low, bringing back {len(extra)} older post(s) so no day is missed")
     return todo + extra
 
+# ---------- NeuroFusion: the slideshow as a video with the binaural beat underneath ----------
+def beat_for(show):
+    for x in show["slides"]:
+        if x.get("type") == "diagram":
+            lft, rgt = float(x["left"]), float(x["right"])
+            return lft, rgt - lft
+    return NF_CARRIER, NF_BEATS.get(kind_of(show), 6.0)
+
+
+def schedule_video(show, bank, stream, when_local, slides, caption):
+    carrier, beat = beat_for(show)
+    video = engine.make_short(slides, os.path.join(engine.HERE, "output", show["id"] + ".mp4"),
+                              seconds_each=NF_SECONDS_PER_SLIDE, beat=beat, carrier=carrier)
+    tags = caption[caption.rfind("\n\n") + 2:] if "\n\n" in caption else ""
+    body = caption[: caption.rfind("\n\n")] if tags else caption
+    caption = (body + f"\n\n🎧 Headphones on. The sound underneath is a real {beat:g} Hz binaural beat "
+               f"({carrier:g} Hz left ear, {carrier + beat:g} Hz right ear). Swipe slowly and let it work."
+               + ("\n\n" + tags if tags else ""))
+    data = [("user", os.environ["UPLOAD_POST_USER"]),
+            ("title", caption), ("description", caption), ("tiktok_title", caption),
+            ("privacy_level", "SELF_ONLY" if TEST_MODE else "PUBLIC_TO_EVERYONE"),
+            ("scheduled_date", when_local.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%SZ")),
+            ("timezone", "UTC"), ("async_upload", "true")]
+    data += [("platform[]", p) for p in stream["platforms"] if not (p == "instagram" and TEST_MODE)]
+    key = show["id"] + "-v-" + when_local.strftime("%Y%m%d%H%M") + ("-test-" + datetime.now().strftime("%H%M%S") if TEST_MODE else "")
+    with open(video, "rb") as fh:
+        r = requests.post(f"{API}/upload", headers={**HEAD(), "Idempotency-Key": key},
+                          data=data, files=[("video", (os.path.basename(video), fh, "video/mp4"))], timeout=600)
+    return r
+
+
 # ---------- scheduling one post ----------
 def schedule_one(show, bank, stream, when_local):
     brand = dict(bank["brand"])
@@ -236,9 +276,12 @@ def schedule_one(show, bank, stream, when_local):
             continue                      # Instagram has no private option, so tests skip it
         data.append(("platform[]", p))
 
-    files = [("photos[]", (os.path.basename(p), open(p, "rb"), "image/jpeg")) for p in slides]
-    r = requests.post(f"{API}/upload_photos", headers={**HEAD(), "Idempotency-Key": show["id"] + "-" + when_local.strftime("%Y%m%d%H%M")},
-                      data=data, files=files, timeout=300)
+    if stream.get("video"):
+        r = schedule_video(show, bank, stream, when_local, slides, caption)
+    else:
+        files = [("photos[]", (os.path.basename(p), open(p, "rb"), "image/jpeg")) for p in slides]
+        r = requests.post(f"{API}/upload_photos", headers={**HEAD(), "Idempotency-Key": show["id"] + "-" + when_local.strftime("%Y%m%d%H%M")},
+                          data=data, files=files, timeout=300)
     body = {}
     try:
         body = r.json()
@@ -274,7 +317,7 @@ def clear_slot(when_local):
             same = dt.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M") == stamp
         except Exception:
             same = False
-        if same and str(j.get("profile_username", "")).lower() == user and j.get("post_type") == "photo":
+        if same and str(j.get("profile_username", "")).lower() == user and j.get("post_type") in ("photo", "video"):
             requests.delete(f"{API}/uploadposts/schedule/{j['job_id']}", headers=HEAD(), timeout=60)
             print(f"  replaced old post at {when_local:%a %d %b %H:%M}: {str(j.get('title'))[:50]}")
 
@@ -300,6 +343,8 @@ def main():
     failures = 0
 
     for stream in STREAMS:
+        if ONLY_STREAM and stream["name"] != ONLY_STREAM:
+            continue
         print(f"\n{stream['name']}:")
         bank = load(stream["bank"])
         state = load(stream["state"], {"posted": []})
