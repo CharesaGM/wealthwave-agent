@@ -367,7 +367,8 @@ def main():
 
         if TEST_MODE:
             when = now + timedelta(minutes=15)
-            schedule_one(pick(todo, stream, when), bank, stream, when)
+            if not schedule_one(pick(todo, stream, when), bank, stream, when):
+                failures += 1             # a test that didn't queue shows as a failed run
             continue
 
         for day in range(DAYS_AHEAD):
