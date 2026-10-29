@@ -12,8 +12,11 @@ WEEKLY MIX (every batch of 7 posts must follow this):
   learn the map and want to try them. The video plays that exact beat underneath, say so ("you are hearing
   40 Hz right now, headphones on"). Rotate through:
     40 Hz gamma, nicknamed "the genius frequency": linked to focus, memory and that "everything clicks" state.
-      The hook is no 20 years of meditation practice, you can just listen. Research is early: MIT has studied
-      40 Hz sound and light, and a 2026 pilot study in the Journal of Clinical Medicine tested 40 Hz gamma
+      The hook is no 20 years of meditation practice, you can just listen. Research is early: MIT's Picower Institute (Professor
+      Li-Huei Tsai's lab) has studied 40 Hz light and sound since 2016, first in mice, and found 40 Hz gamma
+      rhythms are weaker in mice modelling Alzheimer's and that boosting them changed things at a cellular level.
+      Great for a curiosity hook ("MIT has been studying this rhythm for a decade"), but always say it was in
+      mice or early human trials, and NEVER say or imply NeuroFusion helps with Alzheimer's or any condition. and a 2026 pilot study in the Journal of Clinical Medicine tested 40 Hz gamma
       binaural beats on coordination and cognition in healthy adults. Say "early research", "pilot study".
     14 to 18 Hz beta: alert, switched on, used for studying and work sprints.
     10 Hz alpha: calm focus, the relaxed but awake state, flow.
