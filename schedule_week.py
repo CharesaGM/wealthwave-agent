@@ -38,7 +38,7 @@ STREAMS = [
 #   general : entry level binaural beats (old posts without a kind count as this)
 NF_BATCH = {"story": 2, "diagram": 1, "product": 2, "frequency": 2}   # 7 at a time so the writer never runs out of room
 NF_BANNED = ["hemi-sync", "hemi sync", "hemisync", "cure", "cures", "treat", "treats", "treatment",
-             "guarantee", "guaranteed", "driving", "free trial", "suppressed", "suppress"]
+             "guarantee", "guaranteed", "driving", "free trial", "suppressed", "suppress", "mice", "mouse", "rats", "alzheimer", "alzheimers", "alzheimer's", "mit"]
 
 # NeuroFusion videos: which binaural beat plays underneath each kind of post (Hz difference between the ears).
 # A "diagram" post plays the exact tones its diagram shows (e.g. 200 Hz left, 210 Hz right = 10 Hz).
