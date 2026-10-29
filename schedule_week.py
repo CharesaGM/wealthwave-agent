@@ -26,15 +26,17 @@ STREAMS = [
      "brief": "brief_neurofusion.txt", "hour": 21, "minute": 0, "platforms": ["tiktok"],
      "video": True,   # posts as a video with a real binaural beat playing underneath (headphones on)
      # what kind of post goes out each day (Mon=0 ... Sun=6)
-     "mix": {0: "product", 1: "story", 2: "product", 3: "diagram", 4: "story", 5: "product", 6: "general"}},
+     "mix": {0: "product", 1: "story", 2: "frequency", 3: "diagram", 4: "story", 5: "frequency", 6: "product"}},
 ]
 
 # NeuroFusion post kinds
 #   story   : Robert Monroe, the Gateway research, the declassified 1983 report
 #   diagram : how it works, left ear + right ear = the third beat (drawn as a diagram)
 #   product : NeuroFusion itself, why it is rare, how to use a session, the void
+#   frequency : one brainwave frequency and what it is said to do (40 Hz gamma "genius frequency",
+#               10 Hz alpha, 6 Hz theta, 2 Hz delta, 15 Hz beta). The video plays THAT exact beat.
 #   general : entry level binaural beats (old posts without a kind count as this)
-NF_BATCH = {"story": 2, "diagram": 1, "product": 3, "general": 1}   # 7 at a time so the writer never runs out of room
+NF_BATCH = {"story": 2, "diagram": 1, "product": 2, "frequency": 2}   # 7 at a time so the writer never runs out of room
 NF_BANNED = ["hemi-sync", "hemi sync", "hemisync", "cure", "cures", "treat", "treats", "treatment",
              "guarantee", "guaranteed", "driving", "free trial", "suppressed", "suppress"]
 
@@ -93,7 +95,10 @@ def valid_show(s, bank, stream=None):
                     or any(c in text for c in ["—", "–", " - "])):
                 return False
             diagrams = [x for x in sl if x["type"] == "diagram"]
-            if kind_of(s) == "diagram":
+            if kind_of(s) == "frequency":
+                b = float(s["beat"])
+                ok = 0.5 <= b <= 45 and not diagrams
+            elif kind_of(s) == "diagram":
                 if len(diagrams) != 1:
                     return False
                 lft, rgt = int(diagrams[0]["left"]), int(diagrams[0]["right"])
@@ -133,7 +138,11 @@ def refill(stream, bank, posted):
     if stream.get("mix"):
         mix = f"""
 KINDS: every slideshow has a "kind". Write exactly: {NF_BATCH["story"]} "story", {NF_BATCH["diagram"]} "diagram",
-{NF_BATCH["product"]} "product", {NF_BATCH["general"]} "general" (see the WEEKLY MIX in the brief).
+{NF_BATCH["product"]} "product", {NF_BATCH["frequency"]} "frequency" (see the WEEKLY MIX in the brief).
+A "frequency" slideshow is about ONE brainwave frequency and also has a top level "beat" field:
+  the Hz it is about, e.g. "beat": 40 for gamma. The video plays that exact beat underneath.
+  The two frequency posts in a batch must be about DIFFERENT frequencies, and not the same as the
+  frequency posts already used (listed in the hooks below).
 A "diagram" slideshow replaces its FIRST body slide with a diagram slide:
   {{"type": "diagram", "title": "How it works", "left": 200, "right": 210, "text": "max 14 words"}}
   left and right are whole numbers in Hz, right minus left between 4 and 14. The picture is drawn for you.
@@ -221,6 +230,8 @@ def beat_for(show):
         if x.get("type") == "diagram":
             lft, rgt = float(x["left"]), float(x["right"])
             return lft, rgt - lft
+    if kind_of(show) == "frequency":
+        return NF_CARRIER, float(show["beat"])
     return NF_CARRIER, NF_BEATS.get(kind_of(show), 6.0)
 
 
