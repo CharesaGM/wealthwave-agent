@@ -2325,6 +2325,248 @@
     }
    ],
    "caption": "Everything you need to know before your first session. 🎧"
+  },
+  {
+   "id": "ne-069-monroe-soundproof-lab",
+   "kind": "story",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "He spent a decade mapping brain states inside a soundproof lab."
+    },
+    {
+     "type": "body",
+     "title": "Robert Monroe",
+     "text": "A radio executive who left broadcasting to study what sound could do to consciousness."
+    },
+    {
+     "type": "body",
+     "title": "Focus 10",
+     "text": "He named one state mind awake, body asleep, somewhere between dreaming and thinking."
+    },
+    {
+     "type": "body",
+     "title": "The Army noticed",
+     "text": "In 1983 an officer wrote a report on his research called the Gateway Process."
+    },
+    {
+     "type": "body",
+     "title": "Still public today",
+     "text": "Declassified in 2003, you can read it yourself in the CIA reading room."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Robert Monroe didn't set out to build an app, he set out to understand the mind. Decades later we're still using what he found 🎧"
+  },
+  {
+   "id": "ne-070-army-consciousness-map",
+   "kind": "story",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "The Army wanted to know if consciousness had a map."
+    },
+    {
+     "type": "body",
+     "title": "A strange request",
+     "text": "One officer was asked to assess a civilian lab studying brainwaves in Virginia."
+    },
+    {
+     "type": "body",
+     "title": "Two tones, one mind",
+     "text": "Monroe's lab used a tone in each ear so the brain built a third."
+    },
+    {
+     "type": "body",
+     "title": "The verdict",
+     "text": "The 1983 report took the research seriously enough to document it in detail."
+    },
+    {
+     "type": "body",
+     "title": "Same principle now",
+     "text": "NeuroFusion is built on that same two tone idea, decades later."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "The US government once took this seriously enough to write a report. It's public, go read it."
+  },
+  {
+   "id": "ne-071-two-tones-one-beat",
+   "kind": "diagram",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Two tones walk into your ears and one beat walks out."
+    },
+    {
+     "type": "diagram",
+     "title": "How it works",
+     "left": 300,
+     "right": 309,
+     "text": "Left ear plays 300 Hz, right ear plays 309, brain feels 9."
+    },
+    {
+     "type": "body",
+     "title": "Alpha state",
+     "text": "Around 9 Hz sits in the alpha range, calm, alert, awake but settled."
+    },
+    {
+     "type": "body",
+     "title": "Two ears, one rhythm",
+     "text": "Both hemispheres sync to that felt beat instead of drifting separately."
+    },
+    {
+     "type": "body",
+     "title": "Why we layer it",
+     "text": "NeuroFusion builds sessions around these exact gaps, not guesswork."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Two numbers, one ear each, and your brain does the rest. Here's the actual math."
+  },
+  {
+   "id": "ne-072-headphones-first-rule",
+   "kind": "product",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Most people use binaural beats completely wrong."
+    },
+    {
+     "type": "body",
+     "title": "Headphones only",
+     "text": "Two separate tones need two separate ears, speakers just blend them into nothing."
+    },
+    {
+     "type": "body",
+     "title": "Lie down first",
+     "text": "Your body needs to be still for your brain to settle into rhythm."
+    },
+    {
+     "type": "body",
+     "title": "Set an intention",
+     "text": "Decide what you want from the session before you press play."
+    },
+    {
+     "type": "body",
+     "title": "Eyes closed",
+     "text": "The less your eyes do, the more your brain can drift."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Binaural beats aren't just press play and forget. These four steps change everything."
+  },
+  {
+   "id": "ne-073-first-time-feeling",
+   "kind": "product",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "The first time people try this, they say the same thing."
+    },
+    {
+     "type": "body",
+     "title": "The quiet spot",
+     "text": "Somewhere past your usual thoughts, many listeners describe a strange, sudden stillness."
+    },
+    {
+     "type": "body",
+     "title": "Not random noise",
+     "text": "Generic binaural tracks online are not tuned the way layered sessions are."
+    },
+    {
+     "type": "body",
+     "title": "Theta and visualising",
+     "text": "In theta, imagining something can feel easier than thinking about it."
+    },
+    {
+     "type": "body",
+     "title": "Why layering is rare",
+     "text": "Building two precise tones into one session takes more than a loop."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Everyone describes the same strange quiet in their first session. Here's what's actually happening."
+  },
+  {
+   "id": "ne-074-gamma-genius-frequency",
+   "kind": "frequency",
+   "beat": 40,
+   "slides": [
+    {
+     "type": "hook",
+     "text": "40 Hz is nicknamed the genius frequency for a reason."
+    },
+    {
+     "type": "body",
+     "title": "The genius frequency",
+     "text": "Linked to focus, memory and that everything clicks feeling, no meditation needed."
+    },
+    {
+     "type": "body",
+     "title": "You are hearing it",
+     "text": "That hum under this video is 40 Hz gamma, headphones on."
+    },
+    {
+     "type": "body",
+     "title": "MIT is watching",
+     "text": "Researchers at MIT's Picower Institute have studied this rhythm for about a decade."
+    },
+    {
+     "type": "body",
+     "title": "Early research",
+     "text": "A 2026 pilot study in the Journal of Clinical Medicine tested 40 Hz on cognition."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "That hum under this video is 40 Hz gamma, headphones on. Early research is already catching up to it."
+  },
+  {
+   "id": "ne-075-delta-deep-sleep",
+   "kind": "frequency",
+   "beat": 2,
+   "slides": [
+    {
+     "type": "hook",
+     "text": "The slowest brainwave does the deepest work while you sleep."
+    },
+    {
+     "type": "body",
+     "title": "What delta is",
+     "text": "Around 2 Hz, the frequency your brain settles into during deep, dreamless sleep."
+    },
+    {
+     "type": "body",
+     "title": "Why it matters",
+     "text": "Deep sleep is when the body repairs itself and the mind fully resets."
+    },
+    {
+     "type": "body",
+     "title": "Hard to reach",
+     "text": "Modern life rarely lets your brain drop this low on its own."
+    },
+    {
+     "type": "body",
+     "title": "Night sessions",
+     "text": "Many listeners use 2 Hz sessions to wind down before sleep."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Delta is the slowest wave your brain makes, and the deepest work happens there. Built for the nights you can't switch off 🌙"
   }
  ]
 }

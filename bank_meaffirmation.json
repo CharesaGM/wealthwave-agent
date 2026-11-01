@@ -2064,6 +2064,237 @@
     }
    ],
    "caption": "Your name does not need to be on it for it to be true. 🌌"
+  },
+  {
+   "id": "me-063-who-claps-for-you",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "You hit a goal. Who actually claps for that?"
+    },
+    {
+     "type": "body",
+     "title": "Not Everyone Claps",
+     "text": "Some people cannot be happy for every win you get, and that is fine."
+    },
+    {
+     "type": "body",
+     "title": "Say It Anyway",
+     "text": "Your excitement does not need an audience to count as real."
+    },
+    {
+     "type": "body",
+     "title": "Record The Moment",
+     "text": "Speak it out loud for ten minutes, no editing, no judgment, just you."
+    },
+    {
+     "type": "body",
+     "title": "Keep Or Release",
+     "text": "Save it privately or let it go into the void, your choice."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Your win deserves a voice even if nobody else claps. 🎙️"
+  },
+  {
+   "id": "me-064-brain-vs-voice",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Your brain never stops talking. Does your voice?"
+    },
+    {
+     "type": "body",
+     "title": "Thoughts On Loop",
+     "text": "Replaying the same thought in your head does not make it stick."
+    },
+    {
+     "type": "body",
+     "title": "Out Loud Sticks",
+     "text": "Hearing your own voice say something makes it feel more true."
+    },
+    {
+     "type": "body",
+     "title": "No Script Needed",
+     "text": "Just riff for a few minutes about whatever is actually on your mind."
+    },
+    {
+     "type": "body",
+     "title": "Private By Design",
+     "text": "Nobody hears it unless you choose to release it anonymously."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Stop replaying it in your head. Say it out loud instead. 🗣️"
+  },
+  {
+   "id": "me-065-interview-went-badly",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "The interview went badly. Now what?"
+    },
+    {
+     "type": "body",
+     "title": "Let It Sting",
+     "text": "Give the disappointment thirty seconds, then move on to what is next."
+    },
+    {
+     "type": "body",
+     "title": "Reaffirm Tonight",
+     "text": "Say out loud what you still believe about yourself, rejection or not."
+    },
+    {
+     "type": "body",
+     "title": "Ten Minutes Max",
+     "text": "Record a quick riff reminding yourself why you are still qualified."
+    },
+    {
+     "type": "body",
+     "title": "Listen Back Later",
+     "text": "Keep it saved for the next time doubt creeps back in."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "One no does not cancel everything you know about yourself. 💪"
+  },
+  {
+   "id": "me-066-scroll-swap",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Your nights end in scrolling. Try this instead."
+    },
+    {
+     "type": "body",
+     "title": "Scroll Swap",
+     "text": "Replace ten minutes of scrolling with ten minutes of talking to yourself."
+    },
+    {
+     "type": "body",
+     "title": "Name Three Things",
+     "text": "Say out loud what actually went right today, no matter how small."
+    },
+    {
+     "type": "body",
+     "title": "Hear It Back",
+     "text": "Save the riff and play it on a day that feels harder."
+    },
+    {
+     "type": "body",
+     "title": "No Pressure Format",
+     "text": "Ramble, repeat yourself, pause, it still counts as a declaration."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Trade the scroll for a riff before bed tonight. 🌙"
+  },
+  {
+   "id": "me-067-future-her-listens",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "One year from now, she will need this voice note."
+    },
+    {
+     "type": "body",
+     "title": "Future Her Listens",
+     "text": "Record what you are working toward right now, in your own words."
+    },
+    {
+     "type": "body",
+     "title": "Say The Dream",
+     "text": "Speak the goal before life talks you out of believing it."
+    },
+    {
+     "type": "body",
+     "title": "Lock It Away",
+     "text": "Keep it private until the day you actually need to hear it."
+    },
+    {
+     "type": "body",
+     "title": "Proof Of Growth",
+     "text": "Play it back later to hear how far you have actually come."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Leave your future self something worth hearing. 🎧"
+  },
+  {
+   "id": "me-068-scripts-feel-fake",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "Reading affirmations off a screen feels weird. Here's why."
+    },
+    {
+     "type": "body",
+     "title": "Scripts Feel Fake",
+     "text": "Someone else's words rarely sound like something you would actually say."
+    },
+    {
+     "type": "body",
+     "title": "Riff Instead",
+     "text": "Talk through what you actually believe, messy sentences and all."
+    },
+    {
+     "type": "body",
+     "title": "Your Voice Matters",
+     "text": "Hearing yourself say it works better than reading a stranger's script."
+    },
+    {
+     "type": "body",
+     "title": "Ten Minutes Free",
+     "text": "No prompts required, just press record and start talking."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Ditch the script and just talk to yourself for once. ✨"
+  },
+  {
+   "id": "me-069-too-soon-to-share",
+   "slides": [
+    {
+     "type": "hook",
+     "text": "You got good news nobody is ready to hear yet."
+    },
+    {
+     "type": "body",
+     "title": "Too Soon To Share",
+     "text": "Some news needs to stay yours for a little while longer."
+    },
+    {
+     "type": "body",
+     "title": "Say It Somewhere",
+     "text": "Speak the news out loud so it feels real before you tell anyone."
+    },
+    {
+     "type": "body",
+     "title": "Zero Performance",
+     "text": "No likes, no comments, no names attached, just you and the moment."
+    },
+    {
+     "type": "body",
+     "title": "Release Or Keep",
+     "text": "Let it go into the void or keep it close, you decide."
+    },
+    {
+     "type": "cta"
+    }
+   ],
+   "caption": "Say the good news before you are even ready to share it. 🤫"
   }
  ]
 }
