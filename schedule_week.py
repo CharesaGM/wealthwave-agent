@@ -137,6 +137,8 @@ def refill(stream, bank, posted):
     mix = ""
     if stream.get("mix"):
         mix = f"""
+FEELING FIRST: every hook, whatever its kind, starts from a feeling she recognises (see SELL THE FEELING
+in the brief), and every slideshow ends on the benefit she will feel. Rotate the feelings across the batch.
 KINDS: every slideshow has a "kind". Write exactly: {NF_BATCH["story"]} "story", {NF_BATCH["diagram"]} "diagram",
 {NF_BATCH["product"]} "product", {NF_BATCH["frequency"]} "frequency" (see the WEEKLY MIX in the brief).
 A "frequency" slideshow is about ONE brainwave frequency and also has a top level "beat" field:

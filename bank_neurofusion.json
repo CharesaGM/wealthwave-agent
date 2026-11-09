@@ -615,39 +615,6 @@
    "caption": "Start small. Stay consistent 🎧"
   },
   {
-   "id": "nf-019",
-   "slides": [
-    {
-     "type": "hook",
-     "text": "Binaural beats aren't background music"
-    },
-    {
-     "type": "body",
-     "title": "It's a practice",
-     "text": "Treat it like a session, not a playlist."
-    },
-    {
-     "type": "body",
-     "title": "Be still",
-     "text": "Lie down or sit comfortably."
-    },
-    {
-     "type": "body",
-     "title": "Eyes closed",
-     "text": "Less input, deeper state."
-    },
-    {
-     "type": "body",
-     "title": "Come back slowly",
-     "text": "Take a minute before you jump back into your day."
-    },
-    {
-     "type": "cta"
-    }
-   ],
-   "caption": "Give it your full attention and it gives you more back 🌊"
-  },
-  {
    "id": "nf-020",
    "slides": [
     {
@@ -1539,74 +1506,6 @@
    "caption": "No two first sessions sound exactly the same. Curious what yours will feel like."
   },
   {
-   "id": "ne-046-binaural-beats-basics",
-   "kind": "general",
-   "slides": [
-    {
-     "type": "hook",
-     "text": "If you've never tried this, start here."
-    },
-    {
-     "type": "body",
-     "title": "The Basics",
-     "text": "Two slightly different tones, one per ear, create a third perceived beat."
-    },
-    {
-     "type": "body",
-     "title": "For Focus",
-     "text": "Higher frequency beats are commonly used for concentration and alert work sessions."
-    },
-    {
-     "type": "body",
-     "title": "For Sleep",
-     "text": "Lower frequency beats are commonly used to wind down before bed."
-    },
-    {
-     "type": "body",
-     "title": "For Meditation",
-     "text": "Mid range beats are used to help settle a busy, racing mind."
-    },
-    {
-     "type": "cta"
-    }
-   ],
-   "caption": "One simple idea, several everyday uses. Start wherever you need it most."
-  },
-  {
-   "id": "ne-047-different-hours-different-job",
-   "kind": "general",
-   "slides": [
-    {
-     "type": "hook",
-     "text": "Morning, midday, night, this fits differently each time."
-    },
-    {
-     "type": "body",
-     "title": "Morning Focus",
-     "text": "A short session before deep work helps settle a scattered, distracted mind."
-    },
-    {
-     "type": "body",
-     "title": "Midday Reset",
-     "text": "A quick afternoon session can ease stress before the next meeting or task."
-    },
-    {
-     "type": "body",
-     "title": "Evening Wind Down",
-     "text": "A slower session before bed helps signal to your body that rest is near."
-    },
-    {
-     "type": "body",
-     "title": "Same Tool",
-     "text": "One app, three different moments, three different frequency targets."
-    },
-    {
-     "type": "cta"
-    }
-   ],
-   "caption": "Same tool, different job depending on the hour. Which moment do you need most today?"
-  },
-  {
    "id": "ne-048-broadcaster-basement-lab",
    "kind": "story",
    "slides": [
@@ -1811,40 +1710,6 @@
     }
    ],
    "caption": "The quiet spot past your racing thoughts. 🧠"
-  },
-  {
-   "id": "ne-054-two-minute-version",
-   "kind": "general",
-   "slides": [
-    {
-     "type": "hook",
-     "text": "New here? This is the two minute version."
-    },
-    {
-     "type": "body",
-     "title": "Two Tones",
-     "text": "One frequency per ear, slightly different, that is the entire mechanism."
-    },
-    {
-     "type": "body",
-     "title": "Your Brain Fills In",
-     "text": "It perceives a third beat that sits exactly between the two tones."
-    },
-    {
-     "type": "body",
-     "title": "Pick Your Goal",
-     "text": "Different beat ranges are linked to focus, relaxation, meditation or winding down."
-    },
-    {
-     "type": "body",
-     "title": "No Experience Needed",
-     "text": "You do not need years of practice, just headphones and a quiet moment."
-    },
-    {
-     "type": "cta"
-    }
-   ],
-   "caption": "Binaural beats, explained simply. 🎧"
   },
   {
    "id": "ne-055-businessman-sound-lab",
@@ -2053,40 +1918,6 @@
    "caption": "Not all beats are made equal. The gap between the tones is the whole point."
   },
   {
-   "id": "ne-061-never-tried-binaural-beats",
-   "kind": "general",
-   "slides": [
-    {
-     "type": "hook",
-     "text": "Never tried binaural beats? Start with this."
-    },
-    {
-     "type": "body",
-     "title": "The Basics",
-     "text": "Two slightly different tones, one per ear, create a third perceived beat."
-    },
-    {
-     "type": "body",
-     "title": "For Focus",
-     "text": "Higher frequency ranges are often used to support concentration and study."
-    },
-    {
-     "type": "body",
-     "title": "For Sleep",
-     "text": "Lower ranges are often used to wind down before bed."
-    },
-    {
-     "type": "body",
-     "title": "For Calm",
-     "text": "Some people use them during short meditation sessions without years of practice."
-    },
-    {
-     "type": "cta"
-    }
-   ],
-   "caption": "No experience needed, just headphones and a few quiet minutes 🎧"
-  },
-  {
    "id": "ne-062-monroe-radio-empire",
    "kind": "story",
    "slides": [
@@ -2293,40 +2124,6 @@
    "caption": "Theta might be the state you have been chasing without knowing it."
   },
   {
-   "id": "ne-068-binaural-beats-101",
-   "kind": "general",
-   "slides": [
-    {
-     "type": "hook",
-     "text": "Binaural beats explained in under thirty seconds."
-    },
-    {
-     "type": "body",
-     "title": "The Basic Idea",
-     "text": "Two slightly different tones, one per ear, create a third beat your brain perceives."
-    },
-    {
-     "type": "body",
-     "title": "Focus Or Calm",
-     "text": "Different beat frequencies are linked to different states, from alertness to deep relaxation."
-    },
-    {
-     "type": "body",
-     "title": "No Experience Needed",
-     "text": "You do not need years of meditation practice to notice an effect."
-    },
-    {
-     "type": "body",
-     "title": "Headphones Essential",
-     "text": "The effect only works with stereo headphones, speakers will not create the beat."
-    },
-    {
-     "type": "cta"
-    }
-   ],
-   "caption": "Everything you need to know before your first session. 🎧"
-  },
-  {
    "id": "ne-069-monroe-soundproof-lab",
    "kind": "story",
    "slides": [
@@ -2465,40 +2262,6 @@
    "caption": "Binaural beats aren't just press play and forget. These four steps change everything."
   },
   {
-   "id": "ne-073-first-time-feeling",
-   "kind": "product",
-   "slides": [
-    {
-     "type": "hook",
-     "text": "The first time people try this, they say the same thing."
-    },
-    {
-     "type": "body",
-     "title": "The quiet spot",
-     "text": "Somewhere past your usual thoughts, many listeners describe a strange, sudden stillness."
-    },
-    {
-     "type": "body",
-     "title": "Not random noise",
-     "text": "Generic binaural tracks online are not tuned the way layered sessions are."
-    },
-    {
-     "type": "body",
-     "title": "Theta and visualising",
-     "text": "In theta, imagining something can feel easier than thinking about it."
-    },
-    {
-     "type": "body",
-     "title": "Why layering is rare",
-     "text": "Building two precise tones into one session takes more than a loop."
-    },
-    {
-     "type": "cta"
-    }
-   ],
-   "caption": "Everyone describes the same strange quiet in their first session. Here's what's actually happening."
-  },
-  {
    "id": "ne-074-gamma-genius-frequency",
    "kind": "frequency",
    "beat": 40,
@@ -2567,178 +2330,6 @@
     }
    ],
    "caption": "Delta is the slowest wave your brain makes, and the deepest work happens there. Built for the nights you can't switch off 🌙"
-  },
-  {
-   "id": "ne-076-broadcaster-walked-away",
-   "kind": "story",
-   "slides": [
-    {
-     "type": "hook",
-     "text": "A millionaire broadcaster walked away to study the mind."
-    },
-    {
-     "type": "body",
-     "title": "Who he was",
-     "text": "Robert Monroe ran a radio empire before turning to sound research full time."
-    },
-    {
-     "type": "body",
-     "title": "The experiment",
-     "text": "Two tones, one per ear, so the brain built a third beat called Focus 10."
-    },
-    {
-     "type": "body",
-     "title": "Mind awake, body asleep",
-     "text": "Monroe described reaching a state where thoughts stayed sharp but the body felt still."
-    },
-    {
-     "type": "body",
-     "title": "Why NeuroFusion",
-     "text": "We build sessions on that same two tone principle, now in your headphones."
-    },
-    {
-     "type": "cta"
-    }
-   ],
-   "caption": "One man's curiosity became decades of research. NeuroFusion carries the same idea into your headphones 🎧"
-  },
-  {
-   "id": "ne-077-military-funded-research",
-   "kind": "story",
-   "slides": [
-    {
-     "type": "hook",
-     "text": "The US military once funded research into altered states of mind."
-    },
-    {
-     "type": "body",
-     "title": "The research",
-     "text": "In the 1970s, researchers explored two toned audio and the states it created."
-    },
-    {
-     "type": "body",
-     "title": "Army interest",
-     "text": "An officer studied the work and summarized it in a 1983 report."
-    },
-    {
-     "type": "body",
-     "title": "Now public",
-     "text": "That report was declassified in 2003 and anyone can read it today."
-    },
-    {
-     "type": "body",
-     "title": "Same principle",
-     "text": "NeuroFusion sessions use that same two tone idea, built for everyday listening."
-    },
-    {
-     "type": "cta"
-    }
-   ],
-   "caption": "It sat in a government archive for twenty years. Now the principle lives in an app."
-  },
-  {
-   "id": "ne-078-how-it-works-theta",
-   "kind": "diagram",
-   "slides": [
-    {
-     "type": "hook",
-     "text": "200 Hz and 206 Hz become one single feeling."
-    },
-    {
-     "type": "diagram",
-     "title": "How it works",
-     "left": 200,
-     "right": 206,
-     "text": "Left ear hears 200 Hz, right ear hears 206 Hz, brain builds the gap."
-    },
-    {
-     "type": "body",
-     "title": "The 6 Hz gap",
-     "text": "That six Hz difference sits in the theta range, linked to deep meditation and visualisation."
-    },
-    {
-     "type": "body",
-     "title": "Why layer it",
-     "text": "Two slightly different tones force both ears and hemispheres to sync together."
-    },
-    {
-     "type": "body",
-     "title": "Beyond theta",
-     "text": "Beta, alpha and delta work the same way, each gap builds a different state."
-    },
-    {
-     "type": "cta"
-    }
-   ],
-   "caption": "This is the actual math behind every session. Headphones on and feel the gap yourself 🧠"
-  },
-  {
-   "id": "ne-079-layering-is-rare",
-   "kind": "product",
-   "slides": [
-    {
-     "type": "hook",
-     "text": "Layering two frequencies is harder than it sounds."
-    },
-    {
-     "type": "body",
-     "title": "Why it's rare",
-     "text": "Most free tracks use one tone, not two carefully tuned frequencies."
-    },
-    {
-     "type": "body",
-     "title": "The real work",
-     "text": "Every NeuroFusion session is tuned so each ear carries a precise, separate tone."
-    },
-    {
-     "type": "body",
-     "title": "What you feel",
-     "text": "Your brain fuses the two into one steady beat, no extra effort needed."
-    },
-    {
-     "type": "body",
-     "title": "Why it matters",
-     "text": "Precision tuning is what separates a session from a random YouTube video."
-    },
-    {
-     "type": "cta"
-    }
-   ],
-   "caption": "Two tones done right feel completely different. That's the whole point."
-  },
-  {
-   "id": "ne-080-four-small-steps",
-   "kind": "product",
-   "slides": [
-    {
-     "type": "hook",
-     "text": "Most people skip these four small steps."
-    },
-    {
-     "type": "body",
-     "title": "Headphones only",
-     "text": "Two separate tones need two separate ears, speakers will not work."
-    },
-    {
-     "type": "body",
-     "title": "Lie down",
-     "text": "A still body helps your brain settle into the rhythm faster."
-    },
-    {
-     "type": "body",
-     "title": "Set one intention",
-     "text": "Decide what you want from the session before you press play."
-    },
-    {
-     "type": "body",
-     "title": "Eyes closed",
-     "text": "Closing your eyes removes distraction so the beat does the work."
-    },
-    {
-     "type": "cta"
-    }
-   ],
-   "caption": "Small steps, bigger effect. Try the full ritual next time you press play 🌙"
   },
   {
    "id": "ne-081-alpha-calm-focus",
