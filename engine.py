@@ -388,6 +388,110 @@ def draw_diagram(img, t, slide):
     return glow_layer(img, layer, 5)
 
 
+# ======================= NEUROFUSION AI VISUALS =======================
+# A library of AI images (visuals/*.jpg): before/after pairs ("pair_*", "split_head") and glowing single scenes.
+# Two in three NeuroFusion posts use them, the rest keep the drawn looks above, so the feed never feels samey.
+VIS = os.path.join(HERE, "visuals")
+PAIRS = ["pair_brain", "pair_body", "pair_orb", "pair_waves", "pair_storm", "pair_heart", "pair_woman",
+         "split_head", "pair_brain_2"]
+SINGLES = ["two_ears", "headphones", "gamma_focus", "alpha_calm", "delta_sleep", "neurons", "void", "meditate",
+           "inner_light", "ripples", "spine", "abundance"]
+CTA_PICS = ["headphones", "meditate", "void", "abundance", "inner_light"]
+
+
+def uses_visuals(brand, show_id):
+    if brand["theme"] != "neurofusion" or not os.path.isdir(VIS):
+        return False
+    return int(hashlib.sha1(("v" + str(show_id)).encode()).hexdigest(), 16) % 3 != 2
+
+
+def visual_plan(show):
+    """Which image goes on which slide: a pair on the hook, then pairs and singles alternating, never repeating."""
+    rnd = random.Random(int(hashlib.sha1(str(show["id"]).encode()).hexdigest(), 16))
+    pairs, singles, ctas = PAIRS[:], SINGLES[:], CTA_PICS[:]
+    rnd.shuffle(pairs); rnd.shuffle(singles); rnd.shuffle(ctas)
+    plan, used = [], set()
+    for i, s in enumerate(show["slides"]):
+        if s["type"] == "diagram":
+            plan.append(None); continue
+        if s["type"] == "cta":
+            pool = [c for c in ctas if c not in used] or ctas
+        elif s["type"] == "hook" or i % 2 == 0:
+            pool = [p for p in pairs if p not in used] or pairs
+        else:
+            pool = [p for p in singles if p not in used] or singles
+        plan.append(pool[0]); used.add(pool[0])
+    return plan
+
+
+def shadow_text(img, lines_y, fnt, fill):
+    """Words with a soft dark shadow so they read on any image."""
+    sh = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ds = ImageDraw.Draw(sh)
+    for line, y in lines_y:
+        ds.text(((W - ds.textlength(line, font=fnt)) / 2, y + 3), line, font=fnt, fill=(0, 0, 0, 230))
+    img.paste(sh.filter(ImageFilter.GaussianBlur(6)), (0, 0), sh.filter(ImageFilter.GaussianBlur(6)))
+    d = ImageDraw.Draw(img)
+    for line, y in lines_y:
+        d.text(((W - d.textlength(line, font=fnt)) / 2, y), line, font=fnt, fill=fill)
+    return img
+
+
+def text_block(img, text, fnt, fill, y, wrap, gap):
+    lines = textwrap.wrap(text, width=wrap)
+    size = fnt.size
+    img = shadow_text(img, [(ln, y + i * size * gap) for i, ln in enumerate(lines)], fnt, fill)
+    return img, y + len(lines) * size * gap
+
+
+def render_visual_slide(slide, idx, total, brand, pic):
+    """Words at the top, the AI picture fitted into the space underneath, Before/After under pairs."""
+    t = THEMES["neurofusion"]
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 255))
+    y = 230
+    if slide["type"] == "hook":
+        img, y = text_block(img, slide["text"], font("bold", 72), t["text"], y, 22, 1.18)
+        img, y = text_block(img, "headphones on  ·  swipe  >>", font("serif_i", 40), t["accent"], y + 30, 40, 1.2)
+    elif slide["type"] == "body":
+        img, y = text_block(img, slide["title"].upper(), font("medium", 40), t["accent"], y, 40, 1.3)
+        img, y = text_block(img, slide["text"], font("bold", 58), t["text"], y + 26, 26, 1.25)
+    else:
+        img, y = text_block(img, brand["cta_line"], font("serif_i", 54), t["text"], y, 28, 1.3)
+        img, y = text_block(img, brand["cta_name"], font("bold", 104), t["accent"], y + 24, 14, 1.1)
+        img, y = text_block(img, brand["cta_sub"], font("medium", 38), t["text"], y + 20, 34, 1.3)
+        img, y = text_block(img, brand["cta_url"], font("bold", 44), t["accent"], y + 10, 40, 1.2)
+    pair = pic.startswith("pair") or pic == "split_head"
+    src = Image.open(os.path.join(VIS, pic + ".jpg")).convert("RGB").resize((W, H))
+    box = src.convert("L").point(lambda v: 255 if v > 40 else 0).getbbox() or (0, 0, W, H)
+    pad = 30
+    box = (max(0, box[0] - pad), max(0, box[1] - pad), min(W, box[2] + pad), min(H, box[3] + pad))
+    art = src.crop(box)
+    top, bottom = int(y + 50), int(H - (300 if pair else 220))
+    scale = min((W - 60) / art.width, (bottom - top) / art.height, 1.6)
+    art = art.resize((int(art.width * scale), int(art.height * scale)), Image.LANCZOS)
+    ax, ay = (W - art.width) // 2, top + (bottom - top - art.height) // 2
+    fade = Image.new("L", art.size, 255)                  # soft edges so the picture melts into the black
+    fd = ImageDraw.Draw(fade)
+    e = 40
+    for k in range(e):
+        v = int(255 * k / e)
+        fd.rectangle((k, k, art.width - 1 - k, art.height - 1 - k), outline=v)
+    img.paste(art, (ax, ay), fade)
+    if pair:
+        fb = font("medium", 44)
+        d = ImageDraw.Draw(img)
+        ly = ay + art.height + 24
+        for x, lab in ((W * 0.27, "Before"), (W * 0.73, "After")):
+            d.text((x - d.textlength(lab, font=fb) / 2, ly), lab, font=fb, fill=(185, 185, 200))
+    d = ImageDraw.Draw(img)
+    fl = font("medium", 30)
+    label = f'{brand["label"]}  ·  {idx}/{total}'
+    d.text(((W - d.textlength(label, font=fl)) / 2, H - 150), label, font=fl, fill=t["accent"])
+    fh = font("medium", 26)
+    d.text(((W - d.textlength(brand["handle"], font=fh)) / 2, H - 110), brand["handle"], font=fh, fill=t["muted"])
+    return img
+
+
 def render_slide(slide, idx, total, brand, show_id="x"):
     theme_name = brand["theme"]
     t = THEMES[theme_name]
@@ -448,8 +552,11 @@ def render_show(show, brand):
     out = os.path.join(HERE, "output", show["id"])
     os.makedirs(out, exist_ok=True)
     total = len(show["slides"])
+    plan = visual_plan(show) if uses_visuals(brand, show["id"]) else [None] * total
     for i, s in enumerate(show["slides"], 1):
-        render_slide(s, i, total, brand, show["id"]).convert("RGB").save(
+        pic = plan[i - 1]
+        img = render_visual_slide(s, i, total, brand, pic) if pic else render_slide(s, i, total, brand, show["id"])
+        img.convert("RGB").save(
             os.path.join(out, f"slide_{i}.jpg"), "JPEG", quality=92)
     with open(os.path.join(out, "caption.txt"), "w") as fh:
         fh.write(show["caption"] + "\n\n" + " ".join(brand["hashtags"]) + "\n")
